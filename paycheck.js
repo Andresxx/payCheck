@@ -5,7 +5,11 @@ export class Paycheck{
     }
 
     getAmount() {
-        return 0;
+        return this.amount;
+    }
+
+    setAmount(amount) {
+        this.amount = amount;
     }
 }
 

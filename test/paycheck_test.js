@@ -12,7 +12,13 @@ describe('paycheck', function() {
         paycheck = new Paycheck();
      });
      
-     it('La boleta de pago deberia estar vacio cuando es creado', function() {
+    it('La boleta de pago deberia estar vacio cuando es creado', function() {
         expect(paycheck.getAmount()).equal(0);
-      });
+    });
+
+    it('La boleta de pago deberia valer 50 cuando le asignamos 50', function() {
+        paycheck.setAmount(50);
+        expect(paycheck.getAmount()).equal(50);
+    });
+
 });
