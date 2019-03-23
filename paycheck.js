@@ -1,5 +1,11 @@
-class paycheck{
-    constructor(amount){
-        this.amount=amount;
+export class Paycheck{
+
+    constructor(){
+        this.amount = 0;
+    }
+
+    getAmount() {
+        return 0;
     }
 }
+
