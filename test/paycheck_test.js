@@ -7,7 +7,7 @@ import {Paycheck} from '../paycheck.js';
 describe('paycheck', function() {
     
     let paycheck;
-    
+
     beforeEach(function() {
         paycheck = new Paycheck();
      });
