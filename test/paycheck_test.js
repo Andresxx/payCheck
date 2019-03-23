@@ -21,4 +21,8 @@ describe('paycheck', function() {
         expect(paycheck.getAmount()).equal(50);
     });
 
+    it('El nombre del dueño de la boleta de pago deberia ser Waka cuando asignamos Waka', function() {
+        paycheck.setEmployeeName("Waka");
+        expect(paycheck.getEmployeeName()).equal("Waka");
+    });
 });
