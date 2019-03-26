@@ -1,8 +1,9 @@
 export class Paycheck{
 
-    constructor(){
+    constructor(employee){
         this.amount = 0;
         this.employeeName = "";        
+        this.employee = employee;
     }
 
     getAmount() {
