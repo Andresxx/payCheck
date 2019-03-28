@@ -4,6 +4,10 @@ export class Employee{
         this.name = name;
         this.ci = ci;
     }
+
+    calculatePayment(){
+        console.log("Base employee");
+    }
     
 }
 
