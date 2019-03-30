@@ -1,9 +1,8 @@
-import {Employee} from '../employee.js';
-import {Sale} from '../Sale.js';
-export class commissionEmployee extends Employee{
+import {Sale} from '../Employee/Sale';
 
-    constructor(name, ci, baseKardexSalary, commissionPercentage){
-        super(name, ci);
+export class CommissionCalculator{
+
+    constructor(baseKardexSalary, commissionPercentage){
         this.salesList = [];
         this.baseKardexSalary = baseKardexSalary;
         this.commissionPercentage = commissionPercentage;
@@ -25,6 +24,4 @@ export class commissionEmployee extends Employee{
         });
         return totalAmount;
     }
-
 }
-

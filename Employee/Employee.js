@@ -1,13 +1,13 @@
 export class Employee{
 
-    constructor(name, ci){
+    constructor(name, ci, salaryCalculator){
         this.name = name;
         this.ci = ci;
+        this.salaryCalculator = salaryCalculator;
     }
 
-    calculatePayment(){
-        console.log("Base employee");
+    calculateSalary(){
+        return this.salaryCalculator.calculatePayment();
     }
-    
 }
 

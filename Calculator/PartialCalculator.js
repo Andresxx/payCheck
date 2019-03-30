@@ -1,10 +1,7 @@
-import {Employee} from '../employee.js';
-import {Timesheet} from '../Timesheet.js';
+import {Timesheet} from '../Employee/Timesheet'
 
-export class partialTimeEmployee extends Employee{
-
-    constructor(name, ci, amount){
-        super(name, ci);
+export class PartialCalculator {
+    constructor(amount){
         this.amount = amount;
         this.timesheetsList = [];
     }
@@ -24,8 +21,4 @@ export class partialTimeEmployee extends Employee{
         });
         return totalHours;
     }
-
-
-
 }
-
