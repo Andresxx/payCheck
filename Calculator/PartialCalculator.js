@@ -17,7 +17,7 @@ export class PartialCalculator {
     getHoursFromTimeshets(){
         let totalHours = 0;
         this.timesheetsList.forEach(function (timesheet) {
-            totalHours += timesheet.getAmountOfHous();
+            totalHours += timesheet.obtenerMontoPorHoras();
         });
         return totalHours;
     }

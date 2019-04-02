@@ -6,7 +6,8 @@ export class Timesheet{
         this.amountOfHours = amountOfHours;
     }
 
-    getAmountOfHous(){
+
+    obtenerMontoPorHoras(){
         return this.amountOfHours;
     }
 
