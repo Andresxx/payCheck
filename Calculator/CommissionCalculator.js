@@ -2,26 +2,26 @@ import {Sale} from '../Employee/Sale';
 
 export class CommissionCalculator{
 
-    constructor(baseKardexSalary, commissionPercentage){
-        this.salesList = [];
-        this.baseKardexSalary = baseKardexSalary;
-        this.commissionPercentage = commissionPercentage;
+    constructor(salarioBaseDelKardex, porcentajeDeComision){
+        this.listaDeVentas = [];
+        this.salarioBaseDelKardex = salarioBaseDelKardex;
+        this.porcentajeDeComision = porcentajeDeComision;
     }
 
     calcularPago(){
-        return (this.baseKardexSalary+(this.commissionPercentage*this.calculateAmountFromSales()));
+        return (this.salarioBaseDelKardex+(this.porcentajeDeComision*this.calcularMontoDeVentas()));
     }
 
-    addEmployeeSale(date, amount){
-        let sale = new Sale(date, amount);
-        this.salesList.push(sale);
+    agregarVenta(fecha, monto){
+        let venta = new Sale(fecha, monto);
+        this.listaDeVentas.push(venta);
     }
 
-    calculateAmountFromSales(){
-        let totalAmount = 0;
-        this.salesList.forEach(function (sale) {
-            totalAmount += sale.getAmountSold();
+    calcularMontoDeVentas(){
+        let montoTotal = 0;
+        this.listaDeVentas.forEach(function (venta) {
+            montoTotal += venta.getAmountSold();
         });
-        return totalAmount;
+        return montoTotal;
     }
 }

@@ -6,7 +6,7 @@ export class Employee{
         this.salaryCalculator = salaryCalculator;
     }
 
-    calculateSalary(){
+    calcularSalario(){
         return this.salaryCalculator.calcularPago();
     }
 }

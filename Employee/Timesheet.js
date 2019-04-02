@@ -1,6 +1,6 @@
 export class Timesheet{
-    constructor(date, checkInTime, checkOutTime, amountOfHours){
-        this.date = date;
+    constructor(fecha, checkInTime, checkOutTime, amountOfHours){
+        this.fecha = fecha;
         this.checkInTime = checkInTime;
         this.checkOutTime = checkOutTime;
         this.amountOfHours = amountOfHours;

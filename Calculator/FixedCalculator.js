@@ -1,10 +1,10 @@
 export class FixedCalculator {
     
-    constructor(amount){
-        this.amount = amount;
+    constructor(monto){
+        this.monto = monto;
     }
 
     calcularPago(){
-        return this.amount;
+        return this.monto;
     }
 }

@@ -1,24 +1,24 @@
 import {Timesheet} from '../Employee/Timesheet'
 
 export class PartialCalculator {
-    constructor(amount){
-        this.amount = amount;
-        this.timesheetsList = [];
+    constructor(monto){
+        this.monto = monto;
+        this.listaDeHojasDeTiempo = [];
     }
     calcularPago(){
-        return this.amount*this.getHoursFromTimeshets();
+        return this.monto*this.obtenerHorasDeLasHojasDeTiempo();
     }
 
-    addATimesheet(date, checkInTime, checkOutTime, hours){
-        let time = new Timesheet(date, checkInTime, checkOutTime, hours);
-        this.timesheetsList.push(time);
+    agregarHojaDeTiempo(fecha, checkInTime, checkOutTime, horas){
+        let hojaDeTiempo = new Timesheet(fecha, checkInTime, checkOutTime, horas);
+        this.listaDeHojasDeTiempo.push(hojaDeTiempo);
     }
 
-    getHoursFromTimeshets(){
-        let totalHours = 0;
-        this.timesheetsList.forEach(function (timesheet) {
-            totalHours += timesheet.obtenerMontoPorHoras();
+    obtenerHorasDeLasHojasDeTiempo(){
+        let horasTotales = 0;
+        this.listaDeHojasDeTiempo.forEach(function (hojaDeTiempo) {
+            horasTotales += hojaDeTiempo.obtenerMontoPorHoras();
         });
-        return totalHours;
+        return horasTotales;
     }
 }
