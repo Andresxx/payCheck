@@ -5,7 +5,7 @@ export class PartialCalculator {
         this.amount = amount;
         this.timesheetsList = [];
     }
-    calculatePayment(){
+    calcularPago(){
         return this.amount*this.getHoursFromTimeshets();
     }
 

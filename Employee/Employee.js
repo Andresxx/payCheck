@@ -7,7 +7,7 @@ export class Employee{
     }
 
     calculateSalary(){
-        return this.salaryCalculator.calculatePayment();
+        return this.salaryCalculator.calcularPago();
     }
 }
 

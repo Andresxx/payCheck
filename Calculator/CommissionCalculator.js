@@ -8,7 +8,7 @@ export class CommissionCalculator{
         this.commissionPercentage = commissionPercentage;
     }
 
-    calculatePayment(){
+    calcularPago(){
         return (this.baseKardexSalary+(this.commissionPercentage*this.calculateAmountFromSales()));
     }
 

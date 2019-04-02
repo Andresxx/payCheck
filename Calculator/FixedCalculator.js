@@ -4,7 +4,7 @@ export class FixedCalculator {
         this.amount = amount;
     }
 
-    calculatePayment(){
+    calcularPago(){
         return this.amount;
     }
 }
