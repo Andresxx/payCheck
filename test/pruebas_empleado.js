@@ -2,10 +2,10 @@ var assert = require('assert');
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-import {Empleado} from "../Employee/Empleado";
-import {CalculadoraEmpleadoComision} from "../Calculator/CalculadoraEmpleadoComision";
-import {CalculadoraEmpleadoFijo} from "../Calculator/CalculadoraEmpleadoFijo";
-import {CalculadoraEmpleadoParcial} from "../Calculator/CalculadoraEmpleadoParcial";
+import {Empleado} from "../Empleado/Empleado";
+import {CalculadoraEmpleadoComision} from "../Calculadoras/CalculadoraEmpleadoComision";
+import {CalculadoraEmpleadoFijo} from "../Calculadoras/CalculadoraEmpleadoFijo";
+import {CalculadoraEmpleadoParcial} from "../Calculadoras/CalculadoraEmpleadoParcial";
 
 describe('paycheck', function() {
 

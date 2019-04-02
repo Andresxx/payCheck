@@ -1,4 +1,4 @@
-import {TarjetaDeVenta} from '../Employee/TarjetaDeVenta';
+import {TarjetaDeVenta} from '../Empleado/TarjetaDeVenta';
 
 export class CalculadoraEmpleadoComision{
 
