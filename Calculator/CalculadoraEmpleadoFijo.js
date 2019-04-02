@@ -1,4 +1,4 @@
-export class FixedCalculator {
+export class CalculadoraEmpleadoFijo {
     
     constructor(monto){
         this.monto = monto;

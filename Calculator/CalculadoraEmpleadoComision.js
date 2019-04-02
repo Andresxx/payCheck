@@ -1,6 +1,6 @@
-import {Sale} from '../Employee/Sale';
+import {TarjetaDeVenta} from '../Employee/TarjetaDeVenta';
 
-export class CommissionCalculator{
+export class CalculadoraEmpleadoComision{
 
     constructor(salarioBaseDelKardex, porcentajeDeComision){
         this.listaDeVentas = [];
@@ -13,7 +13,7 @@ export class CommissionCalculator{
     }
 
     agregarVenta(fecha, monto){
-        let venta = new Sale(fecha, monto);
+        let venta = new TarjetaDeVenta(fecha, monto);
         this.listaDeVentas.push(venta);
     }
 

@@ -1,4 +1,4 @@
-export class Timesheet{
+export class TarjetaDeAsistencia{
     constructor(fecha, checkInTime, checkOutTime, amountOfHours){
         this.fecha = fecha;
         this.checkInTime = checkInTime;

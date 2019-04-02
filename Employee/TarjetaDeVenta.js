@@ -1,4 +1,4 @@
-export class Sale{
+export class TarjetaDeVenta{
     constructor(date, amountSold){
         this.date = date;
         this.amountSold = amountSold;

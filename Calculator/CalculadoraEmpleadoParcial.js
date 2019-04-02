@@ -1,6 +1,6 @@
-import {Timesheet} from '../Employee/Timesheet'
+import {TarjetaDeAsistencia} from '../Employee/TarjetaDeAsistencia'
 
-export class PartialCalculator {
+export class CalculadoraEmpleadoParcial {
     constructor(monto){
         this.monto = monto;
         this.listaDeHojasDeTiempo = [];
@@ -10,7 +10,7 @@ export class PartialCalculator {
     }
 
     agregarHojaDeTiempo(fecha, checkInTime, checkOutTime, horas){
-        let hojaDeTiempo = new Timesheet(fecha, checkInTime, checkOutTime, horas);
+        let hojaDeTiempo = new TarjetaDeAsistencia(fecha, checkInTime, checkOutTime, horas);
         this.listaDeHojasDeTiempo.push(hojaDeTiempo);
     }
 
