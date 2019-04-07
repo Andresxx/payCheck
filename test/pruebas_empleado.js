@@ -1,3 +1,5 @@
+import {Ventas} from "../Calculadoras/Ventas,js";
+
 var assert = require('assert');
 var expect = require('chai').expect;
 var should = require('chai').should();
@@ -19,8 +21,9 @@ describe('paycheck', function() {
     });
 
     it('El salario de un empleado por comision con 50% de porcentaje, salario base de 1000 y una venta por 3000 deberia ser 2500', function(){
-        let calculadoraEmpleadoPorComision = new CalculadoraEmpleadoComision(1000, 0.5);
-        calculadoraEmpleadoPorComision.agregarVenta('el 5 xdxd',3000)
+        let ventasEmpleado = new Ventas();
+        ventasEmpleado.agregarVenta('el 5 xdxd',3000);
+        let calculadoraEmpleadoPorComision = new CalculadoraEmpleadoComision(1000, 0.5, ventasEmpleado);
         let empleadoComision = new Empleado('Andres',69, calculadoraEmpleadoPorComision);
         expect(empleadoComision.calcularSalario()).equal(2500);
     });

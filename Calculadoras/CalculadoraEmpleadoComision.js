@@ -1,27 +1,18 @@
-import {TarjetaDeVenta} from '../Empleado/TarjetaDeVenta';
+import {Ventas} from './Ventas,js';
 
 export class CalculadoraEmpleadoComision{
 
-    constructor(salarioBaseDelKardex, porcentajeDeComision){
-        this.listaDeVentas = [];
+    constructor(salarioBaseDelKardex, porcentajeDeComision, listaDeVentas){
+        this.ventas = listaDeVentas;
         this.salarioBaseDelKardex = salarioBaseDelKardex;
         this.porcentajeDeComision = porcentajeDeComision;
     }
 
     calcularPago(){
-        return (this.salarioBaseDelKardex+(this.porcentajeDeComision*this.calcularMontoDeVentas()));
+        return (this.salarioBaseDelKardex+(this.porcentajeDeComision*this.ventas.calcularMontoDeVentas()));
     }
 
-    agregarVenta(fecha, monto){
-        let venta = new TarjetaDeVenta(fecha, monto);
-        this.listaDeVentas.push(venta);
-    }
 
-    calcularMontoDeVentas(){
-        let montoTotal = 0;
-        this.listaDeVentas.forEach(function (venta) {
-            montoTotal += venta.getAmountSold();
-        });
-        return montoTotal;
-    }
+
+
 }

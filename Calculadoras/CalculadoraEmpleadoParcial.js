@@ -1,4 +1,4 @@
-import {TarjetaDeAsistencia} from '../Empleado/TarjetaDeAsistencia'
+import {TarjetaDeAsistencia} from './TarjetaDeAsistencia'
 
 export class CalculadoraEmpleadoParcial {
     constructor(monto){
