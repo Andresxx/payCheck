@@ -1,24 +1,14 @@
-import {TarjetaDeAsistencia} from './TarjetaDeAsistencia'
+import {Ventas} from './Asistencias.js';
 
 export class CalculadoraEmpleadoParcial {
-    constructor(monto){
+    constructor(monto, tarjetasDeAsistencia){
         this.monto = monto;
-        this.listaDeHojasDeTiempo = [];
+        this.tarjetasDeAsistencia = tarjetasDeAsistencia;
     }
+
     calcularPago(){
-        return this.monto*this.obtenerHorasDeLasHojasDeTiempo();
+        return this.monto*this.tarjetasDeAsistencia.obtenerHorasDeTarjetasDeAsistencia();
     }
 
-    agregarHojaDeTiempo(fecha, checkInTime, checkOutTime, horas){
-        let hojaDeTiempo = new TarjetaDeAsistencia(fecha, checkInTime, checkOutTime, horas);
-        this.listaDeHojasDeTiempo.push(hojaDeTiempo);
-    }
 
-    obtenerHorasDeLasHojasDeTiempo(){
-        let horasTotales = 0;
-        this.listaDeHojasDeTiempo.forEach(function (hojaDeTiempo) {
-            horasTotales += hojaDeTiempo.obtenerMontoPorHoras();
-        });
-        return horasTotales;
-    }
 }

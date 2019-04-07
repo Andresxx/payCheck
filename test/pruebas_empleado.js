@@ -8,6 +8,7 @@ import {Empleado} from "../Empleado/Empleado";
 import {CalculadoraEmpleadoComision} from "../Calculadoras/CalculadoraEmpleadoComision";
 import {CalculadoraEmpleadoFijo} from "../Calculadoras/CalculadoraEmpleadoFijo";
 import {CalculadoraEmpleadoParcial} from "../Calculadoras/CalculadoraEmpleadoParcial";
+import {Asistencias} from "../Calculadoras/Asistencias";
 
 describe('paycheck', function() {
 
@@ -29,8 +30,9 @@ describe('paycheck', function() {
     });
 
     it('El salario de un empleado parcial 8 horas y cantidad de pago por horas de 600 deberia ser 4800', function(){
-        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(600);
-        calculadoraEmpleadoTiempoParcial.agregarHojaDeTiempo('08-03-2019', '08:00', '17:00', 8)
+        let tarjetasDeAsistencia = new Asistencias();
+        tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
+        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(600, tarjetasDeAsistencia);
         let empleadoPorTiempoParcial = new Empleado('Harold',666, calculadoraEmpleadoTiempoParcial);
         expect(empleadoPorTiempoParcial.calcularSalario()).equal(4800);
     });
