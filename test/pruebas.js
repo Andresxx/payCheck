@@ -59,4 +59,14 @@ describe('paycheck', function() {
         expect(kSoft.generarBoletaDePago(empleadoFijo))
         .equal("BOLETA DE PAGO\nNombre: Harold\nCI: 420\nSalario: 4200\n");
     })
+
+    it('La empresa debe generar la boleta de pago de un empleado de tiempo parcial', function() {
+        let kSoft = new Empresa();
+        let tarjetasDeAsistencia = new Asistencias();
+        tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
+        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(600, tarjetasDeAsistencia);
+        let empleadoPorTiempoParcial = new Empleado('Juan', 666, calculadoraEmpleadoTiempoParcial);
+        expect(kSoft.generarBoletaDePago(empleadoPorTiempoParcial))
+        .equal("BOLETA DE PAGO\nNombre: Juan\nCI: 666\nSalario: 4800\n");
+    })
 });
