@@ -9,6 +9,7 @@ import {CalculadoraEmpleadoComision} from "../Calculadoras/CalculadoraEmpleadoCo
 import {CalculadoraEmpleadoFijo} from "../Calculadoras/CalculadoraEmpleadoFijo";
 import {CalculadoraEmpleadoParcial} from "../Calculadoras/CalculadoraEmpleadoParcial";
 import {Asistencias} from "../Calculadoras/Asistencias";
+import {Empresa} from "../Empresa/Empresa";
 
 describe('paycheck', function() {
 
@@ -37,5 +38,17 @@ describe('paycheck', function() {
         expect(empleadoPorTiempoParcial.calcularSalario()).equal(4800);
     });
 
+    it('Una empresa recien creada deberia tener 0 empleados', function(){
+        let kSoft = new Empresa();
+        expect(kSoft.obtenerListaDeEmpleados().length).equal(0);
+    });
+
+    it('Si la empresa contrata un empleado fijo, la cantidad de empleados que tiene deberia ser 1', function(){
+        let kSoft = new Empresa();
+        let calculadoraDeEmpleadoFijo = new CalculadoraEmpleadoFijo(4200);
+        let empleadoParcial = new Empleado('Carlos',420, calculadoraDeEmpleadoFijo);
+        kSoft.agregarEmpleado(empleadoParcial);
+        expect(kSoft.obtenerListaDeEmpleados().length).equal(1);
+    });
 
 });
