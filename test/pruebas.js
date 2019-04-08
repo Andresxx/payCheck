@@ -46,9 +46,17 @@ describe('paycheck', function() {
     it('Si la empresa contrata un empleado fijo, la cantidad de empleados que tiene deberia ser 1', function(){
         let kSoft = new Empresa();
         let calculadoraDeEmpleadoFijo = new CalculadoraEmpleadoFijo(4200);
-        let empleadoParcial = new Empleado('Carlos',420, calculadoraDeEmpleadoFijo);
-        kSoft.agregarEmpleado(empleadoParcial);
+        let empleadoFijo = new Empleado('Carlos',420, calculadoraDeEmpleadoFijo);
+        kSoft.agregarEmpleado(empleadoFijo);
         expect(kSoft.obtenerListaDeEmpleados().length).equal(1);
     });
 
+    it('La empresa debe generar la boleta de pago de un empleado de salario fijo', function() {
+        let kSoft = new Empresa();
+        let calculadoraDeEmpleadoFijo = new CalculadoraEmpleadoFijo(4200);
+        let empleadoFijo = new Empleado('Harold',420, calculadoraDeEmpleadoFijo);
+        kSoft.agregarEmpleado(empleadoFijo);
+        expect(kSoft.generarBoletaDePago(empleadoFijo))
+        .equal("BOLETA DE PAGO\nNombre: Harold\nCI: 420\nSalario: 4200\n");
+    })
 });

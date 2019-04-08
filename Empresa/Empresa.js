@@ -1,5 +1,5 @@
 import {Empleado} from "../Empleado/Empleado.js";
-
+import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
 export class Empresa {
 
     constructor(){
@@ -7,7 +7,6 @@ export class Empresa {
     }
 
     obtenerListaDeEmpleados(){
-        console.log(this.empleados)
         return this.empleados;
     }
 
@@ -15,4 +14,8 @@ export class Empresa {
         this.empleados.push(empleado);
     }
 
+    generarBoletaDePago(empleado) {
+        this.boleta = new GeneradorDeBoletasDePago(empleado);
+        return this.boleta.generarBoleta();
+    }
 }
