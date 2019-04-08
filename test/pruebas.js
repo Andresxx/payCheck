@@ -1,4 +1,4 @@
-import {Ventas} from "../Calculadoras/Ventas,js";
+import {Ventas} from "../Calculadoras/Ventas.js";
 
 var assert = require('assert');
 var expect = require('chai').expect;

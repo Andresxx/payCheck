@@ -1,4 +1,4 @@
-import {Ventas} from './Ventas,js';
+import {Ventas} from './Ventas.js';
 
 export class CalculadoraEmpleadoComision{
 
