@@ -19,4 +19,8 @@ export class Asistencias {
         return horasTotales;
     }
 
+    obtenerTarjetasDeAsistencia(){
+        return this.listaTarjetasDeAsistencia;
+    }
+
 }

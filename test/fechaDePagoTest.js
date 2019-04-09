@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
-import {FechaDePagoFijo} from "../Fecha de pago/FechaDePagoFijo";
-import {FechaDePagoPorHora} from "../Fecha de pago/FechaDePagoPorHora";
+import {FechaDePagoFijo} from "../src/Fecha de pago/FechaDePagoFijo";
+import {FechaDePagoPorHora} from "../src/Fecha de pago/FechaDePagoPorHora";
 describe('Caculo de las fachas de pago', function() {
     
     it('Si es el ultimo dia del mes tendria que retornar verdad si es un empleado fijo de lo contrario falso', function(){

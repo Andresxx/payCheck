@@ -3,7 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="f15dc8fd-8109-45f7-8e28-8d1fe594202d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pruebas_empleado.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pruebas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadoras/Asistencias.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadoras/Asistencias.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoComision.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoComision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoFijo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoFijo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoParcial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoParcial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadoras/TarjetaDeAsistencia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadoras/TarjetaDeAsistencia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadoras/TarjetaDeVenta.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadoras/TarjetaDeVenta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadoras/Ventas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadoras/Ventas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Empleado/Empleado.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Empleado/Empleado.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Empresa/Empresa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Empresa/Empresa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fecha de pago/FechaDePagoFijo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fecha de pago/FechaDePagoFijo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fecha de pago/FechaDePagoPorComision.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fecha de pago/FechaDePagoPorComision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fecha de pago/FechaDePagoPorHora.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fecha de pago/FechaDePagoPorHora.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js" beforeDir="false" afterPath="$PROJECT_DIR$/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fechaDePagoTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/fechaDePagoTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pruebas.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pruebas.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,82 +31,75 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculadoras/TarjetaDeAsistencia.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculadoras/Asistencias.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Empresa/Empresa.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoComision.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Empleado/Empleado.js">
+        <entry file="file://$PROJECT_DIR$/src/Calculadoras/TarjetaDeAsistencia.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoParcial.js">
+        <entry file="file://$PROJECT_DIR$/src/Calculadoras/Asistencias.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Empresa/Empresa.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoComision.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculadoras/Ventas,js">
+        <entry file="file://$PROJECT_DIR$/src/Empleado/Empleado.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="176">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoParcial.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fecha de pago/FechaDePagoFijo.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/pruebas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
-              <folding>
-                <element signature="e#160#206#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculadoras/TarjetaDeVenta.js">
+        <entry file="file://$PROJECT_DIR$/src/Calculadoras/TarjetaDeVenta.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="14" />
@@ -124,6 +131,8 @@
         <option value="$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoParcial.js" />
         <option value="$PROJECT_DIR$/Calculadoras/Asistencias.js" />
         <option value="$PROJECT_DIR$/Empresa/Empresa.js" />
+        <option value="$PROJECT_DIR$/src/Empresa/Empresa.js" />
+        <option value="$PROJECT_DIR$/src/Calculadoras/Asistencias.js" />
         <option value="$PROJECT_DIR$/test/pruebas.js" />
       </list>
     </option>
@@ -147,26 +156,6 @@
               <item name="payCheck" type="b2602c69:ProjectViewProjectNode" />
               <item name="payCheck" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="payCheck" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payCheck" type="462c0819:PsiDirectoryNode" />
-              <item name="Calculadoras" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payCheck" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payCheck" type="462c0819:PsiDirectoryNode" />
-              <item name="Empleado" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payCheck" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payCheck" type="462c0819:PsiDirectoryNode" />
-              <item name="Empresa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="payCheck" type="b2602c69:ProjectViewProjectNode" />
-              <item name="payCheck" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -182,6 +171,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Arqui de soft\Paycheck project\payCheck\src" />
       <recent name="D:\Arqui de soft\Paycheck project\payCheck\Calculadoras" />
     </key>
   </component>
@@ -210,18 +200,19 @@
       <workItem from="1553780147109" duration="3241000" />
       <workItem from="1554209444398" duration="1911000" />
       <workItem from="1554658919760" duration="5097000" />
-      <workItem from="1554747299005" duration="919000" />
+      <workItem from="1554747299005" duration="2175000" />
+      <workItem from="1554814167017" duration="1657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11168000" />
+    <option name="totallyTimeSpent" value="14081000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14157894" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14125413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -235,27 +226,27 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32901832" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32816902" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info id="npm" order="0" side_tool="true" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14191419" />
-      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32957748" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14125413" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32816902" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -276,72 +267,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoFijo.js">
+    <entry file="file://$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoFijo.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Empleado/Empleado.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoParcial.js">
+    <entry file="file://$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoComision.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculadoras/Ventas,js">
+    <entry file="file://$PROJECT_DIR$/src/Empleado/Empleado.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="176">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculadoras/TarjetaDeVenta.js">
+    <entry file="file://$PROJECT_DIR$/src/Calculadoras/TarjetaDeVenta.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculadoras/CalculadoraEmpleadoComision.js">
+    <entry file="file://$PROJECT_DIR$/Calculadoras/Ventas,js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculadoras/CalculadoraEmpleadoParcial.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculadoras/TarjetaDeAsistencia.js">
+    <entry file="file://$PROJECT_DIR$/src/Fecha de pago/FechaDePagoFijo.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Empresa/Empresa.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="176">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculadoras/Asistencias.js">
+    <entry file="file://$PROJECT_DIR$/src/Calculadoras/TarjetaDeAsistencia.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="176">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Empresa/Empresa.js">
+    <entry file="file://$PROJECT_DIR$/src/Calculadoras/Asistencias.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="304">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/pruebas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
-          <folding>
-            <element signature="e#160#206#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="160">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
         </state>
       </provider>
     </entry>

@@ -1,20 +1,25 @@
-import {Ventas} from "../Calculadoras/Ventas.js";
+import {Ventas} from "../src/Calculadoras/Ventas.js";
 
 var assert = require('assert');
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-import {Empleado} from "../Empleado/Empleado";
-import {CalculadoraEmpleadoComision} from "../Calculadoras/CalculadoraEmpleadoComision";
-import {CalculadoraEmpleadoFijo} from "../Calculadoras/CalculadoraEmpleadoFijo";
-import {CalculadoraEmpleadoParcial} from "../Calculadoras/CalculadoraEmpleadoParcial";
-import {Asistencias} from "../Calculadoras/Asistencias";
-import {Empresa} from "../Empresa/Empresa";
+import {Empleado} from "../src/Empleado/Empleado";
+import {CalculadoraEmpleadoComision} from "../src/Calculadoras/CalculadoraEmpleadoComision";
+import {CalculadoraEmpleadoFijo} from "../src/Calculadoras/CalculadoraEmpleadoFijo";
+import {CalculadoraEmpleadoParcial} from "../src/Calculadoras/CalculadoraEmpleadoParcial";
+import {Asistencias} from "../src/Calculadoras/Asistencias";
+import {Empresa} from "../src/Empresa/Empresa";
 
 describe('paycheck', function() {
 
     beforeEach(function() {
      });
+
+    it('Una nueva lista de ventas de un empleado deberia estar vacia', function(){
+        let tarjetasDeAsistencia = new Asistencias();
+        expect(tarjetasDeAsistencia.obtenerTarjetasDeAsistencia().length).equal(0);
+    });
 
     it('El salario de un empleado fijo basico deberia ser de 4200', function(){
         let calculadoraDeEmpleadoFijo = new CalculadoraEmpleadoFijo(4200);
@@ -68,5 +73,5 @@ describe('paycheck', function() {
         let empleadoPorTiempoParcial = new Empleado('Juan', 666, calculadoraEmpleadoTiempoParcial);
         expect(kSoft.generarBoletaDePago(empleadoPorTiempoParcial))
         .equal("BOLETA DE PAGO\nNombre: Juan\nCI: 666\nSalario: 4800\n");
-    })
+    });
 });

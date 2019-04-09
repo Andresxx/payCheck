@@ -1,5 +1,5 @@
 import {Empleado} from "../Empleado/Empleado.js";
-import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
+import {GeneradorDeBoletasDePago} from "../../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
 export class Empresa {
 
     constructor(){
