@@ -15,13 +15,11 @@ export class GeneradorDeBoletasDePago {
     }
 
     generarBoletaEnJSON(){
-        this.boleta = {
-            Nombre : this.empleado.nombre,
-            CI : this.empleado.ci,
-            Salario : this.empleado.calcularSalario()
-        }
-        return JSON.stringify(this.boleta);
+        let boleta = {
+            nombre : this.empleado.nombre,
+            ci : this.empleado.ci,
+            salario : this.empleado.calcularSalario() 
+        };
+        return JSON.stringify(boleta);
     }
-    
-
 }

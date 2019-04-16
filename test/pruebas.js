@@ -79,12 +79,9 @@ describe('paycheck', function() {
         let kSoft = new Empresa();
         let tarjetasDeAsistencia = new Asistencias();
         tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
-        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(600, tarjetasDeAsistencia);
-        let empleadoPorTiempoParcial = new Empleado('Juan', 666, calculadoraEmpleadoTiempoParcial);
+        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
+        let empleadoPorTiempoParcial = new Empleado('Harold', 888, calculadoraEmpleadoTiempoParcial);
         let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
-        console.log(boletaEnJSON);
         subirArchivo(boletaEnJSON);
     });
-
-
 });

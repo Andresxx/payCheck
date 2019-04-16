@@ -14,7 +14,5 @@ let ref = db.ref("/acceso_restringido/empresa");
 let boletasRef = ref.child("boletasDePago")
 function subirArchivo(archivoJSON) {
     boletasRef.push(archivoJSON);
-    console.log("archivo subido exitosamente");
 }
-
 module.exports = {subirArchivo};
