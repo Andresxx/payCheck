@@ -18,4 +18,9 @@ export class Empresa {
         this.boleta = new GeneradorDeBoletasDePago(empleado);
         return this.boleta.generarBoleta();
     }
+
+    generarBoletaDePagoEnJSON (empleado){
+        this.boleta = new GeneradorDeBoletasDePago(empleado);
+        return this.boleta.generarBoletaEnJSON();
+    }
 }

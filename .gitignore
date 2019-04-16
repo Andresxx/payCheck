@@ -4,6 +4,7 @@
 /tmp
 /out-tsc
 
+
 # Runtime data
 pids
 *.pid
@@ -88,3 +89,5 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+boletas-de-pago-arqui-firebase-adminsdk-xhitp-9a1e2d3621.json

@@ -1,5 +1,4 @@
 import {Ventas} from "../src/Calculadoras/Ventas.js";
-
 var assert = require('assert');
 var expect = require('chai').expect;
 var should = require('chai').should();
@@ -10,6 +9,7 @@ import {CalculadoraEmpleadoFijo} from "../src/Calculadoras/CalculadoraEmpleadoFi
 import {CalculadoraEmpleadoParcial} from "../src/Calculadoras/CalculadoraEmpleadoParcial";
 import {Asistencias} from "../src/Calculadoras/Asistencias";
 import {Empresa} from "../src/Empresa/Empresa";
+import {subirArchivo} from "../src/Firebase/Firebase";
 
 describe('paycheck', function() {
 
@@ -74,4 +74,17 @@ describe('paycheck', function() {
         expect(kSoft.generarBoletaDePago(empleadoPorTiempoParcial))
         .equal("BOLETA DE PAGO\nNombre: Juan\nCI: 666\nSalario: 4800\n");
     });
+
+    it('Deberia poder subir una boleta de pago de un empleado a la base de datos', function() {
+        let kSoft = new Empresa();
+        let tarjetasDeAsistencia = new Asistencias();
+        tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
+        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(600, tarjetasDeAsistencia);
+        let empleadoPorTiempoParcial = new Empleado('Juan', 666, calculadoraEmpleadoTiempoParcial);
+        let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
+        console.log(boletaEnJSON);
+        subirArchivo(boletaEnJSON);
+    });
+
+
 });
