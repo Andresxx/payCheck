@@ -19,7 +19,7 @@ export class GeneradorDeBoletasDePago {
             nombre : this.empleado.nombre,
             ci : this.empleado.ci,
             salario : this.empleado.calcularSalario() 
-        };
-        return JSON.stringify(boleta);
+        };  
+        return boleta;
     }
 }
