@@ -6,12 +6,13 @@
   "nyc": {
     "all": true,
     "include": [
-      "*.js"
+      "*.js",
+      "src/**/*.js"
     ]
   },
   "scripts": {
     "coverage": "nyc mocha --require babel-register",
-    "test": "mocha --require babel-register"
+    "test": "nyc mocha --require babel-register"
   },
   "dependencies": {
     "chai": "^4.2.0",

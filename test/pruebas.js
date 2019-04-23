@@ -80,7 +80,7 @@ describe('paycheck', function() {
         let tarjetasDeAsistencia = new Asistencias();
         tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
         let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
-        let empleadoPorTiempoParcial = new Empleado('Harold', 666, calculadoraEmpleadoTiempoParcial);
+        let empleadoPorTiempoParcial = new Empleado('STARK', 9999, calculadoraEmpleadoTiempoParcial);
         let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
         subirArchivo(boletaEnJSON);
     });
