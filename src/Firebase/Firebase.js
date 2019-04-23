@@ -18,6 +18,8 @@ ref.once("value", function(snapshot) {
   console.log(snapshot.val());
 });
 function subirArchivo(archivoJSON) {
-    boletasRef.push(archivoJSON);
+    boletasRef.push(archivoJSON).then(function() {
+      process.exit(0);
+    });
 }
 module.exports = {subirArchivo};
