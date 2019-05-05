@@ -34,8 +34,10 @@ describe('Pruebas de empresa y Generador de Boletas', function() {
         let calculadoraDeEmpleadoFijo = new CalculadoraEmpleadoFijo(4200);
         let empleadoFijo = new Empleado('Harold',420, calculadoraDeEmpleadoFijo);
         kSoft.agregarEmpleado(empleadoFijo);
+        let fechaActual = new Date();
+        fechaActual = [fechaActual.getDate(), fechaActual.getMonth(), fechaActual.getFullYear()].join('/')
         expect(kSoft.generarBoletaDePago(empleadoFijo))
-        .equal("BOLETA DE PAGO\nNombre: Harold\nCI: 420\nSalario: 4200\n");
+        .equal("BOLETA DE PAGO\nNombre: Harold\nCI: 420\nSalario: 4200\nFecha: " + fechaActual);
     })
 
     it('La empresa debe generar la boleta de pago de un empleado de tiempo parcial', function() {
@@ -44,8 +46,10 @@ describe('Pruebas de empresa y Generador de Boletas', function() {
         tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
         let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(600, tarjetasDeAsistencia);
         let empleadoPorTiempoParcial = new Empleado('Juan', 666, calculadoraEmpleadoTiempoParcial);
+        let fechaActual = new Date();
+        fechaActual = [fechaActual.getDate(), fechaActual.getMonth(), fechaActual.getFullYear()].join('/')
         expect(kSoft.generarBoletaDePago(empleadoPorTiempoParcial))
-        .equal("BOLETA DE PAGO\nNombre: Juan\nCI: 666\nSalario: 4800\n");
+        .equal("BOLETA DE PAGO\nNombre: Juan\nCI: 666\nSalario: 4800\nFecha: " + fechaActual);
     });
 
     it('Deberia poder subir una boleta de pago de un empleado a la base de datos', function() {
