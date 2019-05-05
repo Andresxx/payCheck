@@ -23,4 +23,12 @@ export class Empresa {
         this.boleta = new GeneradorDeBoletasDePago(empleado);
         return this.boleta.generarBoletaEnJSON();
     }
+    
+    generarBoletasDePagoParaTodosLosEmpleados() {
+        let boletasDePago = [];
+        this.empleados.forEach(empleado => {
+            boletasDePago.push(this.generarBoletaDePago(empleado));
+        });
+        return boletasDePago;
+    }
 }

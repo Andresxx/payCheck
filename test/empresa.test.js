@@ -8,7 +8,7 @@ import {CalculadoraEmpleadoParcial} from "../src/Calculadoras/CalculadoraEmplead
 import {Asistencias} from "../src/Calculadoras/Asistencias";
 import {Empresa} from "../src/Empresa/Empresa";
 import {subirArchivo} from "../src/Firebase/Firebase";
-
+import {GeneradorDeBoletasDePago} from "../src/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
 describe('Pruebas de empresa y Generador de Boletas', function() {
 
     beforeEach(function() {
@@ -60,5 +60,27 @@ describe('Pruebas de empresa y Generador de Boletas', function() {
         let empleadoPorTiempoParcial = new Empleado('TEST6', 9999, calculadoraEmpleadoTiempoParcial);
         let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
         subirArchivo(boletaEnJSON);
+    });
+
+    it('La empresa debe generar boletas para todos los empleados que tiene', function() {
+        let kSoft = new Empresa();
+        let tarjetasDeAsistencia = new Asistencias();
+        tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
+        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(600, tarjetasDeAsistencia);
+        let empleadoPorTiempoParcial = new Empleado('Juan', 666, calculadoraEmpleadoTiempoParcial);
+       
+        let calculadoraDeEmpleadoFijo = new CalculadoraEmpleadoFijo(4200);
+        let empleadoFijo = new Empleado('Carlos', 420, calculadoraDeEmpleadoFijo);
+        kSoft.agregarEmpleado(empleadoFijo);
+        kSoft.agregarEmpleado(empleadoPorTiempoParcial);
+
+        let boletasDePago = [];
+        let boletaEmpleadoFijo = new GeneradorDeBoletasDePago(empleadoFijo);
+        let boletaEmpleadoParcial = new GeneradorDeBoletasDePago(empleadoPorTiempoParcial);
+
+        boletasDePago.push(boletaEmpleadoFijo.generarBoleta());
+        boletasDePago.push(boletaEmpleadoParcial.generarBoleta());
+        
+        expect(kSoft.generarBoletasDePagoParaTodosLosEmpleados()).eql(boletasDePago);
     });
 });
