@@ -17,9 +17,16 @@ let boletasRef = ref.child("boletasDePago")
 ref.once("value", function(snapshot) {
   console.log(snapshot.val());
 });
+
 function subirArchivo(archivoJSON) {
+  let currentKey;
     boletasRef.push(archivoJSON).then(function() {
-      process.exit(0);
-    });
+    console.log("curent key is " + boletasRef.key);
+    process.exit(0);
+  });
+  
 }
+function descargarArchivo(id){
+}
+
 module.exports = {subirArchivo};
