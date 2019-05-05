@@ -14,8 +14,6 @@ describe('Pruebas de empresa y Generador de Boletas', function() {
     beforeEach(function() {
      });
 
-    
-
     it('Una empresa recien creada deberia tener 0 empleados', function(){
         let kSoft = new Empresa();
         expect(kSoft.obtenerListaDeEmpleados().length).equal(0);
