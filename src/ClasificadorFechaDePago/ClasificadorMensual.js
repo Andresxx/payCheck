@@ -1,4 +1,5 @@
-export class FechaDePagoFijo{
+export class ClasificadorMensual
+{
     constructor(){        
     }
     esFechaDePago(){

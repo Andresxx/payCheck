@@ -1,4 +1,4 @@
-export class FechaDePagoPorHora{
+export class ClasificadorSemanal{
     constructor(){
     }
     esFechaDePago(){

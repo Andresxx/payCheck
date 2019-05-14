@@ -1,24 +1,24 @@
 var expect = require('chai').expect;
-import {FechaDePagoFijo} from "../src/Fecha de pago/FechaDePagoFijo";
-import {FechaDePagoPorHora} from "../src/Fecha de pago/FechaDePagoPorHora";
+import {ClasificadorMensual} from "../src/ClasificadorFechaDePago/ClasificadorMensual";
+import {ClasificadorSemanal} from "../src/ClasificadorFechaDePago/ClasificadorSemanal";
 describe('Caculo de las fachas de pago', function() {
     
     it('Si es el ultimo dia del mes tendria que retornar verdad si es un empleado fijo de lo contrario falso', function(){
-        let fechaDePagoFijo = new FechaDePagoFijo();
+        let clasificadorMensual = new ClasificadorMensual();
         let fechaActual = new Date();
         let ultimDiaMes = new Date(fechaActual.getFullYear(),fechaActual.getMonth(),0);
         if(fechaActual == ultimDiaMes)
-            expect(fechaDePagoFijo.esFechaDePago()).equal(true);
+            expect(clasificadorMensual.esFechaDePago()).equal(true);
         else
-            expect(fechaDePagoFijo.esFechaDePago()).equal(false);
+            expect(clasificadorMensual.esFechaDePago()).equal(false);
     });
     it('Si es viernes tendria que retornar verdad si es un empleado parcial de lo contrario falso', function(){
-        let fechaDePagoPorHora = new FechaDePagoPorHora();
+        let clasificadorSemanal = new ClasificadorSemanal();
         let fechaActual = new Date();
         if(fechaActual.getDay() == 5)
-            expect(fechaDePagoPorHora.esFechaDePago()).equal(true);
+            expect(clasificadorSemanal.esFechaDePago()).equal(true);
         else
-            expect(fechaDePagoPorHora.esFechaDePago()).equal(false);
+            expect(clasificadorSemanal.esFechaDePago()).equal(false);
     });
 
 });

@@ -1,4 +1,4 @@
-export class FechaDePagoPorComision{
+export class ClasificadorQuincenal{
     constructor(){      
     }
     esFechaDePago(){

@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
-import {Deposito} from '../src/Metodo de pago/Deposito'
-import {Efectivo} from '../src/Metodo de pago/Efectivo'
-import {Cheque} from "../src/Metodo de pago/Cheque";
+import {Deposito} from '../src/MetodoDePago/Deposito'
+import {Efectivo} from '../src/MetodoDePago/Efectivo'
+import {Cheque} from "../src/MetodoDePago/Cheque";
 
 
 describe('Pruebas del metodo de pago', function() {
