@@ -2,12 +2,12 @@ var assert = require('assert');
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-import {Ventas} from "../src/Calculadoras/Ventas.js";
+import {Ventas} from "../src/Tarjetas/Ventas.js";
 import {Empleado} from "../src/Empleado/Empleado";
-import {CalculadoraEmpleadoComision} from "../src/Calculadoras/CalculadoraEmpleadoComision";
-import {CalculadoraEmpleadoFijo} from "../src/Calculadoras/CalculadoraEmpleadoFijo";
-import {CalculadoraEmpleadoParcial} from "../src/Calculadoras/CalculadoraEmpleadoParcial";
-import {Asistencias} from "../src/Calculadoras/Asistencias";
+import {CalculadoraEmpleadoComision} from "../src/CalculadoraSalario/CalculadoraEmpleadoComision";
+import {CalculadoraEmpleadoFijo} from "../src/CalculadoraSalario/CalculadoraEmpleadoFijo";
+import {CalculadoraEmpleadoParcial} from "../src/CalculadoraSalario/CalculadoraEmpleadoParcial";
+import {Asistencias} from "../src/Tarjetas/Asistencias";
 
 describe('Pruebas de empleado', function() {
 

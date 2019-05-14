@@ -1,5 +1,3 @@
-import {Ventas} from './Asistencias.js';
-
 export class CalculadoraEmpleadoParcial {
     constructor(monto, tarjetasDeAsistencia){
         this.monto = monto;

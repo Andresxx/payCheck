@@ -3,9 +3,9 @@ var expect = require('chai').expect;
 var should = require('chai').should();
 
 import {Empleado} from "../src/Empleado/Empleado";
-import {CalculadoraEmpleadoFijo} from "../src/Calculadoras/CalculadoraEmpleadoFijo";
-import {CalculadoraEmpleadoParcial} from "../src/Calculadoras/CalculadoraEmpleadoParcial";
-import {Asistencias} from "../src/Calculadoras/Asistencias";
+import {CalculadoraEmpleadoFijo} from "../src/CalculadoraSalario/CalculadoraEmpleadoFijo";
+import {CalculadoraEmpleadoParcial} from "../src/CalculadoraSalario/CalculadoraEmpleadoParcial";
+import {Asistencias} from "../src/Tarjetas/Asistencias";
 import {Empresa} from "../src/Empresa/Empresa";
 import {subirArchivo} from "../src/Firebase/Firebase";
 import {GeneradorDeBoletasDePago} from "../src/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";

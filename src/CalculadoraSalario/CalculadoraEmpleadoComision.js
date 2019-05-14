@@ -1,5 +1,3 @@
-import {Ventas} from './Ventas.js';
-
 export class CalculadoraEmpleadoComision{
 
     constructor(salarioBaseDelKardex, porcentajeDeComision, listaDeVentas){
