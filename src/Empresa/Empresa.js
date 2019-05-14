@@ -1,8 +1,6 @@
-import {Empleado} from "../Empleado/Empleado.js";
 import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
 
 const nodemailer = require('nodemailer');
-const xoauth2 = require('xoauth2');
 export class Empresa {
 
     constructor(){

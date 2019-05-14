@@ -8,6 +8,7 @@ import {CalculadoraEmpleadoComision} from "../src/CalculadoraSalario/Calculadora
 import {CalculadoraEmpleadoFijo} from "../src/CalculadoraSalario/CalculadoraEmpleadoFijo";
 import {CalculadoraEmpleadoParcial} from "../src/CalculadoraSalario/CalculadoraEmpleadoParcial";
 import {Asistencias} from "../src/Tarjetas/Asistencias";
+import {Cheque} from "../src/MetodoDePago/Cheque";
 
 describe('Pruebas de empleado', function() {
 
@@ -40,4 +41,5 @@ describe('Pruebas de empleado', function() {
         let empleadoPorTiempoParcial = new Empleado('Harold',666, calculadoraEmpleadoTiempoParcial);
         expect(empleadoPorTiempoParcial.calcularSalario()).equal(4800);
     });
+    
 });
