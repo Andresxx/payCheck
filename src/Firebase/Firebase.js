@@ -14,19 +14,91 @@ let db = admin.database();
 let ref = db.ref("/acceso_restringido/empresa");
 
 let boletasRef = ref.child("boletasDePago")
-ref.once("value", function(snapshot) {
+/*ref.once("value", function(snapshot) {
   console.log(snapshot.val());
-});
+});*/
+
+function estaVacio(objeto) {
+  for (var clave in objeto) {
+    if (objeto.hasOwnProperty(clave))
+      return false;
+  }
+  return true;
+}
+
+function subirArchivoPromesa(objetoJSON, referenciaBaseDeDatos) {
+  return promesa = new Promise((resolve, reject) => {
+    if (estaVacio(objetoJSON)) {
+      reject('Error')
+    } else {
+      referenciaBaseDeDatos.push(archivoJSON);
+      resolve('Correcto')
+    }
+  });
+}
+
+// function descargarBoletasPromesa(objetoJSON){
+//   return promesa = new Promise((resolve, reject) => {
+//     if(){
+//       reject('Error')
+//     }
+//     else{
+//       referenciaBaseDeDatos.push(archivoJSON);
+//       resolve('Correcto')
+//     }
+//   });
+// }
+
+function subirArchivoConPromesa(objetoJSON, referenciaBaseDeDatos) {
+  subirArchivoPromesa(objetoJSON, referenciaBaseDeDatos).then()
+}
 
 function subirArchivo(archivoJSON) {
-  let currentKey;
-    boletasRef.push(archivoJSON).then(function() {
-    console.log("curent key is " + boletasRef.key);
-    process.exit(0);
-  });
-  
-}
-function descargarArchivo(id){
+  let resultado = false;
+  boletasRef.push(archivoJSON).then(() =>
+      process.exit(0)
+    )
+    .catch(function (resultado) {
+      console.log("Hubo un error al subir la boleta");
+      resultado = false;
+    });
+  return resultado;
 }
 
-module.exports = {subirArchivo};
+function descargarArchivoEnJson(argu) {
+  return argu;
+}
+
+function descargarBoletas() {
+  let boletasEnJSON;
+  // console.log("Inicio");
+  boletasRef.once("value", async function (snapshot) {
+    boletasEnJSON = await snapshot.val();
+    process.exit(0);
+  }, function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+  });
+  console.log("xdxd");
+  return boletasEnJSON;
+  
+}
+11111
+
+function calbackDownload() {
+
+}
+
+async function descAwait() {
+  let jsonBoletas = await descargarBoletas();
+  console.log("LAS BOLETAS SOOOOON: ");
+  console.log(jsonBoletas);
+}
+
+let promiseDownload = new Promise(function (resolve, reject) {
+  descargarBoletas();
+});
+module.exports = {
+  subirArchivo,
+  descargarBoletas,
+  descAwait
+};

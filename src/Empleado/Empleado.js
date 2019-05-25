@@ -14,4 +14,3 @@ export class Empleado{
         return calcularFechaDePago.esFechaDePago();
     }
 }
-
