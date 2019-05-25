@@ -12,7 +12,8 @@
   },
   "scripts": {
     "coverage": "nyc mocha --require babel-register",
-    "test": "nyc mocha --require babel-register"
+    "test": "nyc mocha --require babel-register",
+    "start": "cd src && node main.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
