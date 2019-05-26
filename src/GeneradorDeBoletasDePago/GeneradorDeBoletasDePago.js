@@ -6,6 +6,7 @@ export class GeneradorDeBoletasDePago {
         this.empleado = empleado;    
     }
 
+
     generarBoleta() {
         this.boleta = "BOLETA DE PAGO\n";
         this.boleta = this.boleta + "Nombre: " + this.empleado.nombre + "\n";
@@ -14,6 +15,7 @@ export class GeneradorDeBoletasDePago {
         this.boleta = this.boleta + "Fecha: " + this.obtenerFechaActualConFormato(new Date);
         return this.boleta;
     }
+    
     obtenerFechaActualConFormato(fecha){
         let fechaConFormato = [fecha.getDate(), fecha.getMonth(), fecha.getFullYear()].join('/');
         return fechaConFormato;

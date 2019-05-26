@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
+
 export class Empleado{
 
     constructor(nombre, ci, calculadoraDeSalario, calcularFechaDePago, metodoDePago, email){
@@ -15,7 +16,7 @@ export class Empleado{
         return this.calculadoraDeSalario.calcularPago();
     }
     esDiaDePago(){
-        return calcularFechaDePago.esFechaDePago();
+        return this.calcularFechaDePago.esFechaDePago();
     }
 
     obtenerMetodoDePago(){

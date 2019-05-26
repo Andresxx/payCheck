@@ -9,6 +9,8 @@ import {Asistencias} from "../src/Tarjetas/Asistencias";
 import {Empresa} from "../src/Empresa/Empresa";
 import {subirArchivo} from "../src/Firebase/Firebase";
 import {GeneradorDeBoletasDePago} from "../src/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
+import {ClasificadorMensual} from "../src/ClasificadorFechaDePago/ClasificadorMensual";
+
 describe('Pruebas de empresa y Generador de Boletas', function() {
 
     beforeEach(function() {
@@ -30,7 +32,8 @@ describe('Pruebas de empresa y Generador de Boletas', function() {
     it('La empresa debe generar la boleta de pago de un empleado de salario fijo', function() {
         let kSoft = new Empresa();
         let calculadoraDeEmpleadoFijo = new CalculadoraEmpleadoFijo(4200);
-        let empleadoFijo = new Empleado('Harold',420, calculadoraDeEmpleadoFijo);
+        let clasificadorMensual = new ClasificadorMensual();
+        let empleadoFijo = new Empleado('Harold', 420, calculadoraDeEmpleadoFijo, clasificadorMensual);
         kSoft.agregarEmpleado(empleadoFijo);
         let fechaActual = new Date();
         fechaActual = [fechaActual.getDate(), fechaActual.getMonth(), fechaActual.getFullYear()].join('/')

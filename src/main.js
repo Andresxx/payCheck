@@ -24,7 +24,9 @@ app.get('/', function (req, res) {
 app.post('/', function(req, res){
     console.log(req.body);  
     res.send(req.body);    
-  });
+    
+});
+  
 
 
 app.listen(port, () => console.log(`App currently on port: ${port}!`))

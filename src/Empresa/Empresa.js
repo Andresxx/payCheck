@@ -28,7 +28,9 @@ export class Empresa {
     generarBoletasDePagoParaTodosLosEmpleados() {
         let boletasDePago = [];
         this.empleados.forEach(empleado => {
-            boletasDePago.push(this.generarBoletaDePago(empleado));
+            if(this.generarBoletaDePago(empleado)) {
+                boletasDePago.push(this.generarBoletaDePago(empleado));
+            }
         });
         return boletasDePago;
     }
@@ -58,5 +60,14 @@ export class Empresa {
             else
                 console.log("Se envio correctamente el mail");
         })
+    }
+    
+    guardarUnEmpleadoEnLaBaseDeDatos(empleado) {
+        //asdasdasd
+    }
+
+    crearEmpleado(empleadoJson) {
+        empleado = fabricaDeEmpleados.crearEmpleado(empleadoJson);
+        guardarUnEmpleadoEnLaBaseDeDatos(empleado);
     }
 }
