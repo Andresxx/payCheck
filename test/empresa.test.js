@@ -7,7 +7,6 @@ import {CalculadoraEmpleadoFijo} from "../src/CalculadoraSalario/CalculadoraEmpl
 import {CalculadoraEmpleadoParcial} from "../src/CalculadoraSalario/CalculadoraEmpleadoParcial";
 import {Asistencias} from "../src/Tarjetas/Asistencias";
 import {Empresa} from "../src/Empresa/Empresa";
-import {subirArchivo} from "../src/Firebase/Firebase";
 import {GeneradorDeBoletasDePago} from "../src/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
 import {ClasificadorMensual} from "../src/ClasificadorFechaDePago/ClasificadorMensual";
 
@@ -53,15 +52,6 @@ describe('Pruebas de empresa y Generador de Boletas', function() {
         .equal("BOLETA DE PAGO\nNombre: Juan\nCI: 666\nSalario: 4800\nFecha: " + fechaActual);
     });
 
-    it('Deberia poder subir una boleta de pago de un empleado a la base de datos', function() {
-        let kSoft = new Empresa();
-        let tarjetasDeAsistencia = new Asistencias();
-        tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
-        let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
-        let empleadoPorTiempoParcial = new Empleado('TEST6', 9999, calculadoraEmpleadoTiempoParcial);
-        let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
-        subirArchivo(boletaEnJSON);
-    });
 
     it('La empresa debe generar boletas para todos los empleados que tiene', function() {
         let kSoft = new Empresa();
