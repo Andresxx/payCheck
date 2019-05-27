@@ -18,4 +18,12 @@ describe('Pruebas de empleado', function() {
         let instanciaDeEmpleadoParcial = empleadoParcial.obtenerInstanciaDelEmpleado();
         expect(instanciaDeEmpleadoParcial.calculadoraDeSalario.constructor.name).equal("CalculadoraEmpleadoParcial");
     });
+
+    it('Si mandamos un Json con datos de empelado por comision, deberia retornar una instancia de empelado por comision', function(){
+        let empleadoEnFormatoJson = {nombre: "Carlos Cary", ci: "8794212", tipoDeEmpleado: "comision", 
+                                    metodoDePago: "efectivo", notificacionDePago: "mail", porcentajeDeComision: '0.5'};
+        let empleadoPorComision = new FabricaEmpleados(empleadoEnFormatoJson);
+        let instanciaDeEmpleadoPorComision = empleadoPorComision.obtenerInstanciaDelEmpleado();
+        expect(instanciaDeEmpleadoPorComision.calculadoraDeSalario.constructor.name).equal("CalculadoraEmpleadoComision");
+    });
 });

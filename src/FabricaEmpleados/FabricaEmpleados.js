@@ -1,10 +1,18 @@
 
-import {CalculadoraEmpleadoFijo} from "../CalculadoraSalario/CalculadoraEmpleadoFijo";
-import {ClasificadorMensual} from "../ClasificadorFechaDePago/ClasificadorMensual";
 import {Empleado} from "../Empleado/Empleado";
-import {Asistencias} from "../Tarjetas/Asistencias";
+
 import {CalculadoraEmpleadoParcial} from "../CalculadoraSalario/CalculadoraEmpleadoParcial";
+import {CalculadoraEmpleadoComision} from "../CalculadoraSalario/CalculadoraEmpleadoComision";
+import {CalculadoraEmpleadoFijo} from "../CalculadoraSalario/CalculadoraEmpleadoFijo";
+
+import {ClasificadorMensual} from "../ClasificadorFechaDePago/ClasificadorMensual";
 import {ClasificadorSemanal} from "../ClasificadorFechaDePago/ClasificadorSemanal";
+import {ClasificadorQuincenal} from "../ClasificadorFechaDePago/ClasificadorQuincenal";
+
+import {Ventas} from "../Tarjetas/Ventas";
+import {Asistencias} from "../Tarjetas/Asistencias";
+
+
 // const CalculadoraEmpleadoFijo = require('../CalculadoraSalario/CalculadoraEmpleadoFijo.js');
 export class FabricaEmpleados {
 
@@ -36,8 +44,22 @@ export class FabricaEmpleados {
                     this.empleadoEnFormatoJson.notificacionDePago);
                 return empleadoParcial;
             case 'comision':
-                console.log('empleado comision');
-                break;
+                // let ventasEmpleado = new Ventas();
+                // ventasEmpleado.agregarVenta('el 5 xdxd',3000);
+                // let calculadoraEmpleadoPorComision = new CalculadoraEmpleadoComision(1000, 0.5, ventasEmpleado);
+                // let empleadoComision = new Empleado('Andres',69, calculadoraEmpleadoPorComision);
+                // expect(empleadoComision.calcularSalario()).equal(2500);
+                let ventasEmpleadoPorComision = new Ventas();
+                let calculadoraEmpleadoPorComision = new CalculadoraEmpleadoComision(this.empleadoEnFormatoJson.salario,
+                                                    this.empleadoEnFormatoJson.porcentajeDeComision, ventasEmpleadoPorComision);
+                let clasificadorQuincenalClasificadorQuincenal = new ClasificadorQuincenal();
+                let empleadoComision = new Empleado(this.empleadoEnFormatoJson.nombre, 
+                    this.empleadoEnFormatoJson.ci,
+                    calculadoraEmpleadoPorComision,
+                    clasificadorQuincenalClasificadorQuincenal,
+                    this.empleadoEnFormatoJson.metodoDePago,
+                    this.empleadoEnFormatoJson.notificacionDePago);
+                return empleadoComision;
             default:
                 console.log("No existe este empleado");
         }
