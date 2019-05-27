@@ -1,6 +1,7 @@
 import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
 
 const nodemailer = require('nodemailer');
+
 export class Empresa {
 
     constructor(){
@@ -61,7 +62,7 @@ export class Empresa {
                 console.log("Se envio correctamente el mail");
         })
     }
-    
+
     guardarUnEmpleadoEnLaBaseDeDatos(empleado) {
         //asdasdasd
     }

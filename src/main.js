@@ -1,14 +1,20 @@
-const express = require('express')
-const app = express()
-const port = 3000
-
+const express = require('express');
+const app = express();
+const port = 3000;
+// const FabricaEmpleados = require('../src/FabricaEmpleados/FabricaEmpleados.js');
+// import {FabricaEmpleados} from "../src/FabricaEmpleados/FabricaEmpleados";
 app.get('/', function (req, res) {
     empleadoJson = {
         nombre: "Expresso",
         ci: 45555,
         salario: 50000
     }
+    // var prueba = {a: "asd", b: "xfs", tipo: "fijo"};
+    // let empleado = new FabricaEmpleados(prueba);
+    // console.log(empleado.obtenerInstanciaDelEmpleado());
+
     res.send(empleadoJson);
+    
   });
 
 
@@ -22,9 +28,8 @@ app.get('/', function (req, res) {
 
 
 app.post('/', function(req, res){
-    console.log(req.body);  
+    console.log(req.body);
     res.send(req.body);    
-    
 });
   
 
