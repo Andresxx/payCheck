@@ -1,4 +1,6 @@
 import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
+import {subirEmpleadoPromesa} from "../Firebase/Firebase";
+import {subirBoletaPromesa} from "../Firebase/Firebase";
 
 const nodemailer = require('nodemailer');
 
@@ -37,7 +39,11 @@ export class Empresa {
     }
 
     guardarUnEmpleadoEnLaBaseDeDatos(empleado) {
-        //asdasdasd
+        subirEmpleadoPromesa(empleado);
+    }
+
+    guardarBoletaEnLaBaseDeDatos(boleta) {
+        subirBoletaPromesa(boleta);
     }
 
     crearEmpleado(empleadoJson) {

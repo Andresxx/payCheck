@@ -46,15 +46,29 @@ function subirEmpleadoPromesa(archivoJSON) {
 }
 
 function borrarBoleta(claveBoleta){
-  console.log("BORRANDO BOLETA");
   boletasRef.child(claveBoleta).remove();
 }
 
 function borrarEmpleado(claveEmpleado){
-  console.log("BORRANDO Empleado");
   empleadosRef.child(claveEmpleado).remove();
 }
 
+
+function descargarBoletasPromesa() {
+  return new Promise((resolve, reject) => {
+    boletasRef.once('value', snapshot => {
+      resolve(snapshot.val());
+    });
+  })
+}
+
+function descargarEmpleadosPromesa() {
+  return new Promise((resolve, reject) => {
+    empleadosRef.once('value', snapshot => {
+      resolve(snapshot.val());
+    });
+  })
+}
 
 module.exports = {
   subirBoleta,
@@ -62,5 +76,7 @@ module.exports = {
   subirEmpleadoPromesa,
   borrarEmpleado,
   subirBoletaPromesa,
-  borrarBoleta
+  borrarBoleta,
+  descargarBoletasPromesa,
+  descargarEmpleadosPromesa
 };
