@@ -2,16 +2,16 @@ const express = require('express');
 const app = express();
 const port = 3000;
 // const FabricaEmpleados = require('../src/FabricaEmpleados/FabricaEmpleados.js');
-// import {FabricaEmpleados} from "../src/FabricaEmpleados/FabricaEmpleados";
+import {FabricaEmpleados} from "../src/FabricaEmpleados/FabricaEmpleados";
 app.get('/', function (req, res) {
-    empleadoJson = {
+    let empleadoJson = {
         nombre: "Expresso",
         ci: 45555,
         salario: 50000
     }
-    // var prueba = {a: "asd", b: "xfs", tipo: "fijo"};
-    // let empleado = new FabricaEmpleados(prueba);
-    // console.log(empleado.obtenerInstanciaDelEmpleado());
+    var prueba = {a: "asd", b: "xfs", tipoDeEmpleado: "fijo"};
+    let empleado = new FabricaEmpleados(prueba);
+    console.log(empleado.obtenerInstanciaDelEmpleado());
 
     res.send(empleadoJson);
     
