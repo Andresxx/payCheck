@@ -44,11 +44,6 @@ export class FabricaEmpleados {
                     this.empleadoEnFormatoJson.notificacionDePago);
                 return empleadoParcial;
             case 'comision':
-                // let ventasEmpleado = new Ventas();
-                // ventasEmpleado.agregarVenta('el 5 xdxd',3000);
-                // let calculadoraEmpleadoPorComision = new CalculadoraEmpleadoComision(1000, 0.5, ventasEmpleado);
-                // let empleadoComision = new Empleado('Andres',69, calculadoraEmpleadoPorComision);
-                // expect(empleadoComision.calcularSalario()).equal(2500);
                 let ventasEmpleadoPorComision = new Ventas();
                 let calculadoraEmpleadoPorComision = new CalculadoraEmpleadoComision(this.empleadoEnFormatoJson.salario,
                                                     this.empleadoEnFormatoJson.porcentajeDeComision, ventasEmpleadoPorComision);
