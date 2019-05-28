@@ -1,6 +1,8 @@
 import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
 import {subirEmpleadoPromesa} from "../Firebase/Firebase";
 import {subirBoletaPromesa} from "../Firebase/Firebase";
+import {descargarBoletasPromesa} from "../Firebase/Firebase";
+import {descargarEmpleadosPromesa} from "../Firebase/Firebase";
 
 const nodemailer = require('nodemailer');
 
@@ -8,6 +10,7 @@ export class Empresa {
 
     constructor(){
         this.empleados = [];
+        this.listaBoletas = [];
     }
 
     obtenerListaDeEmpleados(){
@@ -44,6 +47,20 @@ export class Empresa {
 
     guardarBoletaEnLaBaseDeDatos(boleta) {
         subirBoletaPromesa(boleta);
+    }
+
+    descargarEmpleados(){
+        descargarEmpleadosPromesa().then((empleadosDescargados) =>{
+            this.empleados.length = 0;            
+            this.empleados.push = empleadosDescargados;
+        });
+    }
+
+    descargarBoletas(){
+        descargarBoletasPromesa().then((boletasDescargadas) =>{
+            this.listaBoletas.length = 0;            
+            this.listaBoletas.push = boletasDescargadas;
+        });
     }
 
     crearEmpleado(empleadoJson) {
