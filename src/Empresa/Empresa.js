@@ -2,8 +2,6 @@ import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeB
 import {subirEmpleadoPromesa} from "../Firebase/Firebase";
 import {subirBoletaPromesa} from "../Firebase/Firebase";
 
-const nodemailer = require('nodemailer');
-
 export class Empresa {
 
     constructor(){
