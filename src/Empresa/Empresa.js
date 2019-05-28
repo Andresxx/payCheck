@@ -4,8 +4,6 @@ import {subirBoletaPromesa} from "../Firebase/Firebase";
 import {descargarBoletasPromesa} from "../Firebase/Firebase";
 import {descargarEmpleadosPromesa} from "../Firebase/Firebase";
 
-const nodemailer = require('nodemailer');
-
 export class Empresa {
 
     constructor(){

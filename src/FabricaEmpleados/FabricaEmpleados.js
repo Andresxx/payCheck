@@ -12,8 +12,6 @@ import {ClasificadorQuincenal} from "../ClasificadorFechaDePago/ClasificadorQuin
 import {Ventas} from "../Tarjetas/Ventas";
 import {Asistencias} from "../Tarjetas/Asistencias";
 
-
-// const CalculadoraEmpleadoFijo = require('../CalculadoraSalario/CalculadoraEmpleadoFijo.js');
 export class FabricaEmpleados {
 
     constructor(empleadoEnFormatoJson){

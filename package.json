@@ -13,7 +13,7 @@
   "scripts": {
     "coverage": "nyc mocha --require babel-register",
     "test": "nyc mocha --require babel-register",
-    "start": "cd src && node main.js"
+    "start": "cd src && nodemon main.js --exec babel-node --presets babel-preset-env"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -27,9 +27,12 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^5.1.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.19.1",
     "nyc": "^13.3.0"
   }
 }
