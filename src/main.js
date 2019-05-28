@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const bodyParser = require('body-parser');
 
+import {FabricaEmpleados} from "../src/FabricaEmpleados/FabricaEmpleados";
 import {Empresa} from "../src/Empresa/Empresa";
 
+app.use(bodyParser());
 app.get('/', function (req, res) {
     let empleadoJson = {
         nombre: "Expresso",
@@ -23,8 +26,10 @@ app.post('/', function(req, res){
 
 app.post('/createEmployee', function(req, res){
     let empresa = new Empresa();
-    empresa.agregarEmpleado(req);
+    empresa.crearEmpleado(req.body);
     res.send(req.body);
+    // emplead = JSON
+    console.log('body is ',typeof req.body);
 });
 
 

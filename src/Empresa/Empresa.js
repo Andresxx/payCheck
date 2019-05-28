@@ -3,6 +3,7 @@ import {subirEmpleadoPromesa} from "../Firebase/Firebase";
 import {subirBoletaPromesa} from "../Firebase/Firebase";
 import {descargarBoletasPromesa} from "../Firebase/Firebase";
 import {descargarEmpleadosPromesa} from "../Firebase/Firebase";
+import {FabricaEmpleados} from "../FabricaEmpleados/FabricaEmpleados";
 
 export class Empresa {
 
@@ -62,7 +63,8 @@ export class Empresa {
     }
 
     crearEmpleado(empleadoJson) {
-        empleado = fabricaDeEmpleados.crearEmpleado(empleadoJson);
-        guardarUnEmpleadoEnLaBaseDeDatos(empleado);
+        let fabricaEmpleados = new FabricaEmpleados(empleadoJson); 
+        let empleado = fabricaEmpleados.obtenerInstanciaDelEmpleado();
+        this.guardarUnEmpleadoEnLaBaseDeDatos(empleado);
     }
 }
