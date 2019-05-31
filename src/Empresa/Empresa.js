@@ -10,6 +10,8 @@ export class Empresa {
     constructor(){
         this.empleados = [];
         this.listaBoletas = [];
+        this.empleadosBD = null;
+        this.boletasBD = null;
     }
 
     obtenerListaDeEmpleados(){
@@ -48,19 +50,17 @@ export class Empresa {
         subirBoletaPromesa(boleta);
     }
 
-    descargarEmpleados(){
-        descargarEmpleadosPromesa().then((empleadosDescargados) =>{
-            this.empleados.length = 0;            
-            this.empleados.push = empleadosDescargados;
-        });
+    async descargarEmpleados(){
+        this.empleadosBD = await descargarEmpleadosPromesa();
+        return this.empleadosBD;
     }
+ 
 
-    descargarBoletas(){
-        descargarBoletasPromesa().then((boletasDescargadas) =>{
-            this.listaBoletas.length = 0;            
-            this.listaBoletas.push = boletasDescargadas;
-        });
+    async descargarBoletas(){
+        this.boletasBD = await descargarBoletasPromesa();
+        return this.boletasBD;
     }
+ 
 
     crearEmpleado(empleadoJson) {
         let fabricaEmpleados = new FabricaEmpleados(empleadoJson); 

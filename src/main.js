@@ -32,5 +32,19 @@ app.post('/createEmployee', function(req, res){
     console.log('body is ',typeof req.body);
 });
 
+app.get('/paychecks', async (req, res)=>{
+    let empresa = new Empresa();
+    let boletas = await empresa.descargarBoletas();
+    res.send(boletas);
+ });
+
+ app.get('/employees', async (req, res) => {
+    let empresa = new Empresa();
+    let empleados = await empresa.descargarEmpleados();
+    res.send(empleados);
+ });
+ 
+ 
+
 
 app.listen(port, () => console.log(`App currently on port: ${port}!`))
