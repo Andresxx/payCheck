@@ -1,4 +1,4 @@
-import {Empleado} from "../Empleado/Empleado.js";
+import {Empleado} from "../../ReglasDeNegocioEmpresariales/Entidades/Empleado/Empleado.js";
 
 export class GeneradorDeBoletasDePago {
 

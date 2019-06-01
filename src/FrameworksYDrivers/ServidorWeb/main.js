@@ -3,8 +3,8 @@ const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
 
-import {FabricaEmpleados} from "../src/FabricaEmpleados/FabricaEmpleados";
-import {Empresa} from "../src/Empresa/Empresa";
+import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
+import {Empresa} from "../../CasosDeUso/Empresa/Empresa";
 
 app.use(bodyParser());
 app.get('/', function (req, res) {

@@ -13,7 +13,7 @@
   "scripts": {
     "coverage": "nyc mocha --require babel-register",
     "test": "nyc mocha --require babel-register",
-    "start": "cd src && nodemon main.js --exec babel-node --presets babel-preset-env"
+    "start": "cd src/FrameworksYDrivers/ServidorWeb && nodemon main.js --exec babel-node --presets babel-preset-env"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

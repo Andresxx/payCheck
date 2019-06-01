@@ -1,16 +1,16 @@
 
-import {Empleado} from "../Empleado/Empleado";
+import {Empleado} from "../ReglasDeNegocioEmpresariales/Entidades/Empleado/Empleado.js";
 
-import {CalculadoraEmpleadoParcial} from "../CalculadoraSalario/CalculadoraEmpleadoParcial";
-import {CalculadoraEmpleadoComision} from "../CalculadoraSalario/CalculadoraEmpleadoComision";
-import {CalculadoraEmpleadoFijo} from "../CalculadoraSalario/CalculadoraEmpleadoFijo";
+import {CalculadoraEmpleadoParcial} from "../ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoParcial";
+import {CalculadoraEmpleadoComision} from "../ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoComision";
+import {CalculadoraEmpleadoFijo} from "../ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoFijo";
 
-import {ClasificadorMensual} from "../ClasificadorFechaDePago/ClasificadorMensual";
-import {ClasificadorSemanal} from "../ClasificadorFechaDePago/ClasificadorSemanal";
-import {ClasificadorQuincenal} from "../ClasificadorFechaDePago/ClasificadorQuincenal";
+import {ClasificadorMensual} from "../ReglasDeNegocioEmpresariales/Entidades/ClasificadorFechaDePago/ClasificadorMensual";
+import {ClasificadorSemanal} from "../ReglasDeNegocioEmpresariales/Entidades/ClasificadorFechaDePago/ClasificadorSemanal";
+import {ClasificadorQuincenal} from "../ReglasDeNegocioEmpresariales/Entidades/ClasificadorFechaDePago/ClasificadorQuincenal";
 
-import {Ventas} from "../Tarjetas/Ventas";
-import {Asistencias} from "../Tarjetas/Asistencias";
+import {Ventas} from "../ReglasDeNegocioEmpresariales/Entidades/Tarjetas/Ventas";
+import {Asistencias} from "../ReglasDeNegocioEmpresariales/Entidades/Tarjetas/Asistencias";
 
 export class FabricaEmpleados {
 

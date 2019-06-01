@@ -1,9 +1,9 @@
 import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
-import {subirEmpleadoPromesa} from "../Firebase/Firebase";
-import {subirBoletaPromesa} from "../Firebase/Firebase";
-import {descargarBoletasPromesa} from "../Firebase/Firebase";
-import {descargarEmpleadosPromesa} from "../Firebase/Firebase";
-import {FabricaEmpleados} from "../FabricaEmpleados/FabricaEmpleados";
+import {subirEmpleadoPromesa} from "../../FrameworksYDrivers/Firebase/Firebase";
+import {subirBoletaPromesa} from "../../FrameworksYDrivers/Firebase/Firebase";
+import {descargarBoletasPromesa} from "../../FrameworksYDrivers/Firebase/Firebase";
+import {descargarEmpleadosPromesa} from "../../FrameworksYDrivers/Firebase/Firebase";
+import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
 
 export class Empresa {
 

@@ -1,58 +1,58 @@
 import {
   Empleado
-} from "../src/Empleado/Empleado";
+} from "../src/ReglasDeNegocioEmpresariales/Entidades/Empleado/Empleado";
 import {
   CalculadoraEmpleadoFijo
-} from "../src/CalculadoraSalario/CalculadoraEmpleadoFijo";
+} from "../src/ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoFijo";
 import {
   CalculadoraEmpleadoParcial
-} from "../src/CalculadoraSalario/CalculadoraEmpleadoParcial";
+} from "../src/ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoParcial";
 import {
   Asistencias
-} from "../src/Tarjetas/Asistencias";
+} from "../src/ReglasDeNegocioEmpresariales/Entidades/Tarjetas/Asistencias";
 import {
   Empresa
-} from "../src/Empresa/Empresa";
+} from "../src/CasosDeUso/Empresa/Empresa";
 import {
   GeneradorDeBoletasDePago
-} from "../src/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
+} from "../src/CasosDeUso/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
 import {
   ClasificadorMensual
-} from "../src/ClasificadorFechaDePago/ClasificadorMensual";
+} from "../src/ReglasDeNegocioEmpresariales/Entidades/ClasificadorFechaDePago/ClasificadorMensual";
 import {
   ClasificadorSemanal
-} from "../src/ClasificadorFechaDePago/ClasificadorSemanal";
+} from "../src/ReglasDeNegocioEmpresariales/Entidades/ClasificadorFechaDePago/ClasificadorSemanal";
 
 import {
   Deposito
-} from '../src/MetodoDePago/Deposito'
+} from '../src/ReglasDeNegocioEmpresariales/Entidades/MetodoDePago/Deposito'
 import {
   Efectivo
-} from '../src/MetodoDePago/Efectivo'
+} from '../src/ReglasDeNegocioEmpresariales/Entidades/MetodoDePago/Efectivo'
 import {
   Cheque
-} from "../src/MetodoDePago/Cheque";
+} from "../src/ReglasDeNegocioEmpresariales/Entidades/MetodoDePago/Cheque";
 
 import {
   subirEmpleadoPromesa
-} from "../src/Firebase/Firebase";
+} from "../src/FrameworksYDrivers/Firebase/Firebase";
 import {
   borrarEmpleado
-} from "../src/Firebase/Firebase";
+} from "../src/FrameworksYDrivers/Firebase/Firebase";
 import {
   subirBoletaPromesa
-} from "../src/Firebase/Firebase";
+} from "../src/FrameworksYDrivers/Firebase/Firebase";
 import {
   borrarBoleta
-} from "../src/Firebase/Firebase";
+} from "../src/FrameworksYDrivers/Firebase/Firebase";
 
 import {
   descargarBoletasPromesa
-} from "../src/Firebase/Firebase";
+} from "../src/FrameworksYDrivers/Firebase/Firebase";
 
 import {
   descargarEmpleadosPromesa
-} from "../src/Firebase/Firebase";
+} from "../src/FrameworksYDrivers/Firebase/Firebase";
 
 
 

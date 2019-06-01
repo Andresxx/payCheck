@@ -2,13 +2,13 @@ var assert = require('assert');
 var expect = require('chai').expect;
 var should = require('chai').should();
 
-import {Empleado} from "../src/Empleado/Empleado";
-import {CalculadoraEmpleadoFijo} from "../src/CalculadoraSalario/CalculadoraEmpleadoFijo";
-import {CalculadoraEmpleadoParcial} from "../src/CalculadoraSalario/CalculadoraEmpleadoParcial";
-import {Asistencias} from "../src/Tarjetas/Asistencias";
-import {Empresa} from "../src/Empresa/Empresa";
-import {GeneradorDeBoletasDePago} from "../src/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
-import {ClasificadorMensual} from "../src/ClasificadorFechaDePago/ClasificadorMensual";
+import {Empleado} from "../src/ReglasDeNegocioEmpresariales/Entidades/Empleado/Empleado";
+import {CalculadoraEmpleadoFijo} from "../src/ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoFijo";
+import {CalculadoraEmpleadoParcial} from "../src/ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoParcial";
+import {Asistencias} from "../src/ReglasDeNegocioEmpresariales/Entidades/Tarjetas/Asistencias";
+import {Empresa} from "../src/CasosDeUso/Empresa/Empresa";
+import {GeneradorDeBoletasDePago} from "../src/CasosDeUso/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
+import {ClasificadorMensual} from "../src/ReglasDeNegocioEmpresariales/Entidades/ClasificadorFechaDePago/ClasificadorMensual";
 
 describe('Pruebas de empresa y Generador de Boletas', function() {
 
