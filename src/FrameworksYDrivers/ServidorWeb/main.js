@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
 import {Empresa} from "../../CasosDeUso/Empresa/Empresa";
+import {ControladorEmpleado} from "../../AdaptadoresDeInterfaz/Controladores/ControladorEmpleado";
 
 app.use(bodyParser());
 app.get('/', function (req, res) {
@@ -28,8 +29,13 @@ app.post('/createEmployee', function(req, res){
     let empresa = new Empresa();
     empresa.crearEmpleado(req.body);
     res.send(req.body);
-    // emplead = JSON
     console.log('body is ',typeof req.body);
+});
+
+app.post('/new-employee', function(req, res){
+    let controladorEmpleado = new ControladorEmpleado();
+    controladorEmpleado.crearEmpleado(req.body);
+    res.send(req.body);
 });
 
 app.get('/paychecks', async (req, res)=>{
@@ -43,6 +49,8 @@ app.get('/paychecks', async (req, res)=>{
     let empleados = await empresa.descargarEmpleados();
     res.send(empleados);
  });
+
+
  
  
 
