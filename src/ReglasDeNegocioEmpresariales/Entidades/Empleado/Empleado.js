@@ -12,6 +12,10 @@ export class Empleado{
         this.email = email;
     }
 
+    definirMetodoDePago(metodoPago){
+        this.metodoDePago = metodoPago;
+    }
+
     calcularSalario(){
         return this.calculadoraDeSalario.calcularPago();
     }

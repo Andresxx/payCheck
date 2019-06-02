@@ -1,9 +1,15 @@
 export class Efectivo {
 
-    constructor(){}
+    constructor() {
+        this.sePago = false;
+    }
 
-    obtenerPago(){
+    obtenerPago() {
         return "Efectivo";
+    }
+
+    pagar(){
+        this.sePago = true;
     }
 
 }

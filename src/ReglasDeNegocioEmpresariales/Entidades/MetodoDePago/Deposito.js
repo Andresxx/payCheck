@@ -1,9 +1,17 @@
 export class Deposito {
 
-    constructor(){}
+    constructor(numeroCuenta, monto) {
+        this.numeroCuenta = numeroCuenta;
+        this.monto = monto;
+        this.sePago = false; 
+    }
 
-    obtenerPago(){
+    obtenerPago() {
         return "Deposito";
+    }
+
+    pagar(){
+        this.sePago = true;
     }
 
 }
