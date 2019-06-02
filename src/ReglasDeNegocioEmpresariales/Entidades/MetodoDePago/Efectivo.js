@@ -1,7 +1,8 @@
 export class Efectivo {
 
-    constructor() {
+    constructor(monto) {
         this.sePago = false;
+        this.monto = monto;
     }
 
     obtenerPago() {

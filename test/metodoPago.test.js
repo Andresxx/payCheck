@@ -27,7 +27,7 @@ describe('Pruebas del metodo de pago', function () {
         expect(efectivo.obtenerPago()).equal('Efectivo');
     });
     it('El empleado deberia poder cobrar en efectivo', function () {
-        let efectivo = new Efectivo();
+        let efectivo = new Efectivo(4000);
         efectivo.pagar();
         expect(efectivo.sePago).equal(true);        
     });
