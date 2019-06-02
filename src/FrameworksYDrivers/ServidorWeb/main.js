@@ -2,11 +2,14 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
 import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
 import {Empresa} from "../../CasosDeUso/Empresa/Empresa";
 import {ControladorEmpleado} from "../../AdaptadoresDeInterfaz/Controladores/ControladorEmpleado";
 
+
+app.use(cors())
 app.use(bodyParser());
 app.get('/', function (req, res) {
     let empleadoJson = {
