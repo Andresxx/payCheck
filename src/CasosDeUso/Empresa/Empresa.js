@@ -41,21 +41,21 @@ export class Empresa {
     }
 
     guardarUnEmpleadoEnLaBaseDeDatos(empleado) {
-        instanciaFirebase.subirEmpleadoPromesa(empleado);
+        this.instanciaFirebase.subirEmpleadoPromesa(empleado);
     }
 
     guardarBoletaEnLaBaseDeDatos(boleta) {
-        instanciaFirebase.subirBoletaPromesa(boleta);
+        this.instanciaFirebase.subirBoletaPromesa(boleta);
     }
 
     async descargarEmpleados(){
-        this.empleadosBD = await instanciaFirebase.descargarEmpleadosPromesa();
+        this.empleadosBD = await this.instanciaFirebase.descargarEmpleadosPromesa();
         return this.empleadosBD;
     }
  
 
     async descargarBoletas(){
-        this.boletasBD = await instanciaFirebase.descargarBoletasPromesa();
+        this.boletasBD = await this.instanciaFirebase.descargarBoletasPromesa();
         return this.boletasBD;
     }
  
