@@ -21,12 +21,28 @@ import {
 } from "../src/ReglasDeNegocioEmpresariales/Entidades/MetodoDePago/Cheque";
 
 import {
-  FirebaseDB
+  descargarBoletasPromesa
 } from "../src/FrameworksYDrivers/Firebase/Firebase"
-let instanciaFirebase = new FirebaseDB();
+import {
+  descargarEmpleadosPromesa
+} from "../src/FrameworksYDrivers/Firebase/Firebase"
+import {
+  subirBoletaPromesa
+} from "../src/FrameworksYDrivers/Firebase/Firebase"
+import {
+  subirEmpleadoPromesa
+} from "../src/FrameworksYDrivers/Firebase/Firebase"
+
+import {
+  borrarBoleta
+} from "../src/FrameworksYDrivers/Firebase/Firebase"
+import {
+  borrarEmpleado
+} from "../src/FrameworksYDrivers/Firebase/Firebase"
 
 
 describe('PRUEBAS BASE DE DATOS', () => {
+
 
   it('Deberia poder subir un empleado a la base de datos', () => {
     let tarjetasDeAsistencia = new Asistencias();
@@ -35,11 +51,12 @@ describe('PRUEBAS BASE DE DATOS', () => {
     let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
     let clasificadorSemanal = new ClasificadorSemanal();
     let empleadoPorTiempoParcial = new Empleado('TEST666666666666666', 9999, calculadoraEmpleadoTiempoParcial, clasificadorSemanal, cheque, "whatsapp");
-    instanciaFirebase.subirEmpleadoPromesa(empleadoPorTiempoParcial).then((clave) => {
+    subirEmpleadoPromesa(empleadoPorTiempoParcial).then((clave) => {
       setTimeout(() => {
-        borrarEmpleado(clave);
         process.exit(0);
       }, 4000);
+      borrarEmpleado(clave);
+
     });
   });
 
@@ -50,29 +67,29 @@ describe('PRUEBAS BASE DE DATOS', () => {
     let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
     let empleadoPorTiempoParcial = new Empleado('TEST7777777777777777', 9999, calculadoraEmpleadoTiempoParcial);
     let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
-    instanciaFirebase.subirBoletaPromesa(boletaEnJSON).then((claveBoleta) => {
+    subirBoletaPromesa(boletaEnJSON).then((claveBoleta) => {
       setTimeout(() => {
-        //borrarBoleta(claveBoleta);
         process.exit(0);
-      }, 10000);
-      borrarBoleta(claveBoleta);
+      }, 4000);
+      borrarBoleta(claveBoleta); 
     });
+
   });
 
   it('Deberia poder descargar las boletas', () => {
-    instanciaFirebase.descargarBoletasPromesa().then((boletasDescargadas) => {
-      // setTimeout(() => {
-
-      // }, 6000);
+    descargarBoletasPromesa().then((boletasDescargadas) => {
+      setTimeout(() => {
+        process.exit(0);
+       }, 3000);
       console.log(boletasDescargadas);
     });
   });
 
   it('Deberia poder descargar los empleados', () => {
-    instanciaFirebase.descargarEmpleadosPromesa().then((empleadosDescargados) => {
-      // setTimeout(() => {
-
-      // }, 6000);
+    descargarEmpleadosPromesa().then((empleadosDescargados) => {
+       setTimeout(() => {
+        process.exit(0);
+       }, 3000);
       console.log(empleadosDescargados);
     });
   });

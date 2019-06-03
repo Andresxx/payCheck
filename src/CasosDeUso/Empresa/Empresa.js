@@ -1,6 +1,11 @@
 import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
-import {FirebaseDB} from "../../FrameworksYDrivers/Firebase/Firebase"
+import {descargarBoletasPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
+import {descargarEmpleadosPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
+import {subirBoletaPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
+import {subirEmpleadoPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
+
 import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
+
 
 export class Empresa {
 
@@ -9,7 +14,7 @@ export class Empresa {
         this.listaBoletas = [];
         this.empleadosBD = null;
         this.boletasBD = null;
-        this.instanciaFirebase = new FirebaseDB();
+
     }
 
     obtenerListaDeEmpleados(){
@@ -41,21 +46,21 @@ export class Empresa {
     }
 
     guardarUnEmpleadoEnLaBaseDeDatos(empleado) {
-        this.instanciaFirebase.subirEmpleadoPromesa(empleado);
+        subirEmpleadoPromesa(empleado);
     }
 
     guardarBoletaEnLaBaseDeDatos(boleta) {
-        this.instanciaFirebase.subirBoletaPromesa(boleta);
+        subirBoletaPromesa(boleta);
     }
 
     async descargarEmpleados(){
-        this.empleadosBD = await this.instanciaFirebase.descargarEmpleadosPromesa();
+        this.empleadosBD = await descargarEmpleadosPromesa();
         return this.empleadosBD;
     }
  
 
     async descargarBoletas(){
-        this.boletasBD = await this.instanciaFirebase.descargarBoletasPromesa();
+        this.boletasBD = await descargarBoletasPromesa();
         return this.boletasBD;
     }
  
