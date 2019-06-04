@@ -1,14 +1,18 @@
-let admin = require('firebase-admin');
-let serviceAccount = require("../../../boletas-de-pago-a5393-firebase-adminsdk-swovw-4299b1a229.json");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://boletas-de-pago-a5393.firebaseio.com"
-});
+class FirebaseDB {
 
-let db = admin.database();
-let ref = db.ref("/acceso_restringido/empresa");
-
+  constructor() {
+    this.admin = require('firebase-admin');
+    this.serviceAccount = require("../../../boletas-de-pago-a5393-firebase-adminsdk-swovw-4299b1a229.json");
+    this.admin.initializeApp({
+      credential: this.admin.credential.cert(this.serviceAccount),
+      databaseURL: "https://boletas-de-pago-a5393.firebaseio.com"
+    });
+    this.db = this.admin.database();
+    this.ref = this.db.ref("/acceso_restringido/empresa");
+    this.boletasRef = this.ref.child("boletasDePago");
+    this.empleadosRef = this.ref.child("empleados");
+  }
 export let boletasRef = ref.child("boletasDePago")
 let empleadosRef = ref.child("empleados");
 
@@ -47,10 +51,11 @@ let empleadosRef = ref.child("empleados");
       });
     })
   }
+}
 
-  module.exports = {
-    subirBoletaPromesa,
-    subirEmpleadoPromesa,
-    descargarBoletasPromesa,
-    descargarEmpleadosPromesa
-  };
+const instanciaDB =  new FirebaseDB();
+Object.freeze(instanciaDB);
+
+module.exports = {
+  instanciaDB
+};

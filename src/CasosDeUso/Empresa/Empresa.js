@@ -1,11 +1,6 @@
 import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
-import {descargarBoletasPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
-import {descargarEmpleadosPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
-import {subirBoletaPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
-import {subirEmpleadoPromesa} from "../../FrameworksYDrivers/Firebase/Firebase"
-
+import {instanciaDB} from "../../FrameworksYDrivers/Firebase/Firebase"
 import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
-
 
 export class Empresa {
 
@@ -46,21 +41,21 @@ export class Empresa {
     }
 
     guardarUnEmpleadoEnLaBaseDeDatos(empleado) {
-        subirEmpleadoPromesa(empleado);
+        instanciaDB.subirEmpleadoPromesa(empleado);
     }
 
     guardarBoletaEnLaBaseDeDatos(boleta) {
-        subirBoletaPromesa(boleta);
+        instanciaDB.subirBoletaPromesa(boleta);
     }
 
     async descargarEmpleados(){
-        this.empleadosBD = await descargarEmpleadosPromesa();
+        this.empleadosBD = await instanciaDB.descargarEmpleadosPromesa();
         return this.empleadosBD;
     }
  
 
     async descargarBoletas(){
-        this.boletasBD = await descargarBoletasPromesa();
+        this.boletasBD = await instanciaDB.descargarBoletasPromesa();
         return this.boletasBD;
     }
  

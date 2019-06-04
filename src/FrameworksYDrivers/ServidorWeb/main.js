@@ -28,13 +28,6 @@ app.post('/', function(req, res){
     res.send(req.body);    
 });
 
-app.post('/createEmployee', function(req, res){
-    let empresa = new Empresa();
-    empresa.crearEmpleado(req.body);
-    res.send(req.body);
-    console.log('body is ',typeof req.body);
-});
-
 app.post('/new-employee', function(req, res){
     let controladorEmpleado = new ControladorEmpleado();
     controladorEmpleado.crearEmpleado(req.body);
