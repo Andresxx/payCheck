@@ -9,6 +9,7 @@ export class Empresa {
         this.listaBoletas = [];
         this.empleadosBD = null;
         this.boletasBD = null;
+
     }
 
     obtenerListaDeEmpleados(){

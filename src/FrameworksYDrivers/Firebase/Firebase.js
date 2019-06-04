@@ -1,3 +1,4 @@
+
 class FirebaseDB {
 
   constructor() {
@@ -12,28 +13,30 @@ class FirebaseDB {
     this.boletasRef = this.ref.child("boletasDePago");
     this.empleadosRef = this.ref.child("empleados");
   }
+export let boletasRef = ref.child("boletasDePago")
+let empleadosRef = ref.child("empleados");
 
-  subirBoletaPromesa(archivoJSON) {
+  function subirBoletaPromesa(archivoJSON) {
     return new Promise((resolve, reject) => {
       resolve(this.boletasRef.push(archivoJSON).key);
     })
   }
 
-  subirEmpleadoPromesa(archivoJSON) {
+  function subirEmpleadoPromesa(archivoJSON) {
     return new Promise((resolve, reject) => {
       resolve(this.empleadosRef.push(archivoJSON).key);
     })
   }
 
-  borrarBoleta(claveBoleta) {
+  function borrarBoleta(claveBoleta) {
     this.boletasRef.child(claveBoleta).remove();
   }
 
-  borrarEmpleado(claveEmpleado) {
+  function borrarEmpleado(claveEmpleado) {
     this.empleadosRef.child(claveEmpleado).remove();
   }
 
-  descargarBoletasPromesa() {
+  function descargarBoletasPromesa() {
     return new Promise((resolve, reject) => {
       this.boletasRef.once('value', snapshot => {
         resolve(snapshot.val());
@@ -41,16 +44,14 @@ class FirebaseDB {
     })
   }
 
-  descargarEmpleadosPromesa() {
+  function descargarEmpleadosPromesa() {
     return new Promise((resolve, reject) => {
       this.empleadosRef.once('value', snapshot => {
         resolve(snapshot.val());
       });
     })
   }
-
 }
-
 
 const instanciaDB =  new FirebaseDB();
 Object.freeze(instanciaDB);

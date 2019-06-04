@@ -27,6 +27,7 @@ import {
 
 describe('PRUEBAS BASE DE DATOS', () => {
 
+
   it('Deberia poder subir un empleado a la base de datos', () => {
     let tarjetasDeAsistencia = new Asistencias();
     tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
@@ -36,9 +37,10 @@ describe('PRUEBAS BASE DE DATOS', () => {
     let empleadoPorTiempoParcial = new Empleado('TEST666666666666666', 9999, calculadoraEmpleadoTiempoParcial, clasificadorSemanal, cheque, "whatsapp");
     instanciaDB.subirEmpleadoPromesa(empleadoPorTiempoParcial).then((clave) => {
       setTimeout(() => {
-        borrarEmpleado(clave);
         process.exit(0);
       }, 4000);
+      borrarEmpleado(clave);
+
     });
   });
 
@@ -51,11 +53,11 @@ describe('PRUEBAS BASE DE DATOS', () => {
     let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
     instanciaDB.subirBoletaPromesa(boletaEnJSON).then((claveBoleta) => {
       setTimeout(() => {
-        //borrarBoleta(claveBoleta);
         process.exit(0);
-      }, 10000);
-      borrarBoleta(claveBoleta);
+      }, 4000);
+      borrarBoleta(claveBoleta); 
     });
+
   });
 
   it('Deberia poder descargar las boletas', () => {
@@ -69,6 +71,7 @@ describe('PRUEBAS BASE DE DATOS', () => {
   });
 
   it('Deberia poder descargar los empleados', () => {
+
     instanciaDB.descargarEmpleadosPromesa().then((empleadosDescargados) => {
       // setTimeout(() => {
 
@@ -78,5 +81,4 @@ describe('PRUEBAS BASE DE DATOS', () => {
 
     });
   });
-
 });
