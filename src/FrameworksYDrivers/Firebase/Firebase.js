@@ -13,30 +13,27 @@ class FirebaseDB {
     this.boletasRef = this.ref.child("boletasDePago");
     this.empleadosRef = this.ref.child("empleados");
   }
-export let boletasRef = ref.child("boletasDePago")
-let empleadosRef = ref.child("empleados");
-
-  function subirBoletaPromesa(archivoJSON) {
+  subirBoletaPromesa(archivoJSON) {
     return new Promise((resolve, reject) => {
       resolve(this.boletasRef.push(archivoJSON).key);
     })
   }
 
-  function subirEmpleadoPromesa(archivoJSON) {
+  subirEmpleadoPromesa(archivoJSON) {
     return new Promise((resolve, reject) => {
       resolve(this.empleadosRef.push(archivoJSON).key);
     })
   }
 
-  function borrarBoleta(claveBoleta) {
+  borrarBoleta(claveBoleta) {
     this.boletasRef.child(claveBoleta).remove();
   }
 
-  function borrarEmpleado(claveEmpleado) {
+  borrarEmpleado(claveEmpleado) {
     this.empleadosRef.child(claveEmpleado).remove();
   }
 
-  function descargarBoletasPromesa() {
+  descargarBoletasPromesa() {
     return new Promise((resolve, reject) => {
       this.boletasRef.once('value', snapshot => {
         resolve(snapshot.val());
@@ -44,7 +41,7 @@ let empleadosRef = ref.child("empleados");
     })
   }
 
-  function descargarEmpleadosPromesa() {
+  descargarEmpleadosPromesa() {
     return new Promise((resolve, reject) => {
       this.empleadosRef.once('value', snapshot => {
         resolve(snapshot.val());
