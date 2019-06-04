@@ -4,8 +4,6 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const cors = require('cors')
 
-import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
-import {Empresa} from "../../CasosDeUso/Empresa/Empresa";
 import {ControladorEmpleado} from "../../AdaptadoresDeInterfaz/Controladores/ControladorEmpleado";
 import {ControladorBoletas} from "../../AdaptadoresDeInterfaz/Controladores/ControladorBoletas";
 
