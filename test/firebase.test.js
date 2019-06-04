@@ -21,9 +21,8 @@ import {
 } from "../src/ReglasDeNegocioEmpresariales/Entidades/MetodoDePago/Cheque";
 
 import {
-  FirebaseDB
+  instanciaDB
 } from "../src/FrameworksYDrivers/Firebase/Firebase"
-let instanciaFirebase = new FirebaseDB();
 
 
 describe('PRUEBAS BASE DE DATOS', () => {
@@ -35,7 +34,7 @@ describe('PRUEBAS BASE DE DATOS', () => {
     let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
     let clasificadorSemanal = new ClasificadorSemanal();
     let empleadoPorTiempoParcial = new Empleado('TEST666666666666666', 9999, calculadoraEmpleadoTiempoParcial, clasificadorSemanal, cheque, "whatsapp");
-    instanciaFirebase.subirEmpleadoPromesa(empleadoPorTiempoParcial).then((clave) => {
+    instanciaDB.subirEmpleadoPromesa(empleadoPorTiempoParcial).then((clave) => {
       setTimeout(() => {
         borrarEmpleado(clave);
         process.exit(0);
@@ -50,7 +49,7 @@ describe('PRUEBAS BASE DE DATOS', () => {
     let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
     let empleadoPorTiempoParcial = new Empleado('TEST7777777777777777', 9999, calculadoraEmpleadoTiempoParcial);
     let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
-    instanciaFirebase.subirBoletaPromesa(boletaEnJSON).then((claveBoleta) => {
+    instanciaDB.subirBoletaPromesa(boletaEnJSON).then((claveBoleta) => {
       setTimeout(() => {
         //borrarBoleta(claveBoleta);
         process.exit(0);
@@ -60,20 +59,23 @@ describe('PRUEBAS BASE DE DATOS', () => {
   });
 
   it('Deberia poder descargar las boletas', () => {
-    instanciaFirebase.descargarBoletasPromesa().then((boletasDescargadas) => {
+    instanciaDB.descargarBoletasPromesa().then((boletasDescargadas) => {
       // setTimeout(() => {
 
       // }, 6000);
       console.log(boletasDescargadas);
+      process.exit(0);
     });
   });
 
   it('Deberia poder descargar los empleados', () => {
-    instanciaFirebase.descargarEmpleadosPromesa().then((empleadosDescargados) => {
+    instanciaDB.descargarEmpleadosPromesa().then((empleadosDescargados) => {
       // setTimeout(() => {
 
       // }, 6000);
       console.log(empleadosDescargados);
+      process.exit(0);
+
     });
   });
 

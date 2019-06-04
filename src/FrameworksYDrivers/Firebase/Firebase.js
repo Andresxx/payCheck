@@ -1,4 +1,4 @@
-export class FirebaseDB {
+class FirebaseDB {
 
   constructor() {
     this.admin = require('firebase-admin');
@@ -52,3 +52,9 @@ export class FirebaseDB {
 }
 
 
+const instanciaDB =  new FirebaseDB();
+Object.freeze(instanciaDB);
+
+module.exports = {
+  instanciaDB
+};
