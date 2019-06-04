@@ -1,5 +1,3 @@
-import {Empleado} from "../../ReglasDeNegocioEmpresariales/Entidades/Empleado/Empleado.js";
-
 export class GeneradorDeBoletasDePago {
 
     constructor(empleado){

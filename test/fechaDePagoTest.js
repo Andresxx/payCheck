@@ -12,6 +12,7 @@ describe('Caculo de las fachas de pago', function() {
         else
             expect(clasificadorMensual.esFechaDePago()).equal(false);
     });
+    
     it('Si es viernes tendria que retornar verdad si es un empleado parcial de lo contrario falso', function(){
         let clasificadorSemanal = new ClasificadorSemanal();
         let fechaActual = new Date();

@@ -7,7 +7,7 @@ import {CalculadoraEmpleadoFijo} from "../src/ReglasDeNegocioEmpresariales/Entid
 import {CalculadoraEmpleadoParcial} from "../src/ReglasDeNegocioEmpresariales/Entidades/CalculadoraSalario/CalculadoraEmpleadoParcial";
 import {Asistencias} from "../src/ReglasDeNegocioEmpresariales/Entidades/Tarjetas/Asistencias";
 import {Empresa} from "../src/CasosDeUso/Empresa/Empresa";
-import {GeneradorDeBoletasDePago} from "../src/CasosDeUso/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
+import {GeneradorDeBoletasDePago} from "../src/ReglasDeNegocioEmpresariales/Entidades/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago";
 import {ClasificadorMensual} from "../src/ReglasDeNegocioEmpresariales/Entidades/ClasificadorFechaDePago/ClasificadorMensual";
 
 describe('Pruebas de empresa y Generador de Boletas', function() {

@@ -1,4 +1,4 @@
-import {GeneradorDeBoletasDePago} from "../GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
+import {GeneradorDeBoletasDePago} from "../../ReglasDeNegocioEmpresariales/Entidades/GeneradorDeBoletasDePago/GeneradorDeBoletasDePago.js";
 import {instanciaDB} from "../../FrameworksYDrivers/Firebase/Firebase"
 import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
 

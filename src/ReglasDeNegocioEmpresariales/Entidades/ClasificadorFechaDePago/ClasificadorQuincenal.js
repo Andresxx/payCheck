@@ -1,6 +1,7 @@
 export class ClasificadorQuincenal{
     constructor(){      
     }
+    
     esFechaDePago(){
         let fechaActula = new Date();
         return this.numeroDeSemana(fechaActula) % 2 == 0 && this.esViernes(fechaActula);
