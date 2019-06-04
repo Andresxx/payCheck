@@ -7,20 +7,12 @@ const cors = require('cors')
 import {FabricaEmpleados} from "../../FabricaEmpleados/FabricaEmpleados";
 import {Empresa} from "../../CasosDeUso/Empresa/Empresa";
 import {ControladorEmpleado} from "../../AdaptadoresDeInterfaz/Controladores/ControladorEmpleado";
-
+import {ControladorBoletas} from "../../AdaptadoresDeInterfaz/Controladores/ControladorBoletas";
 
 app.use(cors())
 app.use(bodyParser());
 app.get('/', function (req, res) {
-    let empleadoJson = {
-        nombre: "Expresso",
-        ci: 45555,
-        salario: 50000
-    }
-    var prueba = {a: "asd", b: "xfs", tipoDeEmpleado: "fijo"};
-
-    res.send(empleadoJson);
-    
+    res.send("Bienvenido a paycheck");
 });
 
 app.post('/', function(req, res){
@@ -35,8 +27,8 @@ app.post('/new-employee', function(req, res){
 });
 
 app.get('/paychecks', async (req, res)=>{
-    let empresa = new Empresa();
-    let boletas = await empresa.descargarBoletas();
+    let controladorBoletas = new ControladorBoletas();
+    let boletas = await controladorBoletas.descargarBoletas();
     res.send(boletas);
  });
 
@@ -45,10 +37,5 @@ app.get('/paychecks', async (req, res)=>{
     let empleados = await controladorEmpleado.descargarEmpleados();
     res.send(empleados);
  });
-
-
- 
- 
-
 
 app.listen(port, () => console.log(`App currently on port: ${port}!`))
