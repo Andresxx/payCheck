@@ -28,57 +28,54 @@ import {
 describe('PRUEBAS BASE DE DATOS', () => {
 
 
-  it('Deberia poder subir un empleado a la base de datos', () => {
-    let tarjetasDeAsistencia = new Asistencias();
-    tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
-    let cheque = new Cheque();
-    let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
-    let clasificadorSemanal = new ClasificadorSemanal();
-    let empleadoPorTiempoParcial = new Empleado('TEST666666666666666', 9999, calculadoraEmpleadoTiempoParcial, clasificadorSemanal, cheque, "whatsapp");
-    instanciaDB.subirEmpleadoPromesa(empleadoPorTiempoParcial).then((clave) => {
-      setTimeout(() => {
-        process.exit(0);
-      }, 4000);
-      borrarEmpleado(clave);
-
-    });
-  });
-
-  it('Deberia poder subir una boleta de pago a la base de datos', () => {
+  it('Deberia poder subir una boleta de pago a la base de datos', async () => {
     let kSoft = new Empresa();
     let tarjetasDeAsistencia = new Asistencias();
     tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
     let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
     let empleadoPorTiempoParcial = new Empleado('TEST7777777777777777', 9999, calculadoraEmpleadoTiempoParcial);
     let boletaEnJSON = kSoft.generarBoletaDePagoEnJSON(empleadoPorTiempoParcial);
-    instanciaDB.subirBoletaPromesa(boletaEnJSON).then((claveBoleta) => {
-      setTimeout(() => {
-        process.exit(0);
-      }, 4000);
-      borrarBoleta(claveBoleta); 
+    await instanciaDB.subirBoletaPromesa(boletaEnJSON).then((claveBoleta) => {
+      instanciaDB.borrarBoleta(claveBoleta);
+      setTimeout(() => {}, 8000);
     });
 
   });
 
-  it('Deberia poder descargar las boletas', () => {
-    instanciaDB.descargarBoletasPromesa().then((boletasDescargadas) => {
-      // setTimeout(() => {
+  it('Deberia poder subir un empleado a la base de datos', async () => {
+    let tarjetasDeAsistencia = new Asistencias();
+    tarjetasDeAsistencia.agregarTarjetaDeAsistencia('08-03-2019', '08:00', '17:00', 8);
+    let calculadoraEmpleadoTiempoParcial = new CalculadoraEmpleadoParcial(900, tarjetasDeAsistencia);
+    let em = {
+      nom: "123",
+      ape: "1234",
+      cal: calculadoraEmpleadoTiempoParcial
+    };
+    await instanciaDB.subirEmpleadoPromesa(em).then((clave) => {
+      instanciaDB.borrarEmpleado(clave)
+    });
+  });
 
-      // }, 6000);
+  it('Deberia poder descargar las boletas', async () => {
+    await instanciaDB.descargarBoletasPromesa().then((boletasDescargadas) => {
       console.log(boletasDescargadas);
-      process.exit(0);
     });
   });
 
-  it('Deberia poder descargar los empleados', () => {
+  it('Deberia poder descargar los empleados', async () => {
 
-    instanciaDB.descargarEmpleadosPromesa().then((empleadosDescargados) => {
-      // setTimeout(() => {
-
-      // }, 6000);
+    await instanciaDB.descargarEmpleadosPromesa().then((empleadosDescargados) => {
       console.log(empleadosDescargados);
-      process.exit(0);
 
     });
+  });
+
+  it('Deberia poder descargar las boletas', async () => {
+    await instanciaDB.recuperarBoletasDelDiaActual().then((boletasDescargadas) => {
+    });
+  });
+
+  after(() => {
+    process.exit(0);
   });
 });

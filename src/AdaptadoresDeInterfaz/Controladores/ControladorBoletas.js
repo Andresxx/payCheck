@@ -9,4 +9,9 @@ export class ControladorBoletas {
         let boletas = await this.empresa.descargarBoletas();
         return boletas;
     }
+
+    async descargarBoletasDelDiaDeHoy(){
+        let boletas = await this.empresa.obtenerBoletasDelDiaDeHoy();
+        return boletas;
+    }
 }

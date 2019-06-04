@@ -58,8 +58,11 @@ export class Empresa {
         this.boletasBD = await instanciaDB.descargarBoletasPromesa();
         return this.boletasBD;
     }
- 
 
+    async obtenerBoletasDelDiaDeHoy(){
+        return await instanciaDB.recuperarBoletasDelDiaActual();
+    }
+ 
     crearEmpleado(empleadoJson) {
         let fabricaEmpleados = new FabricaEmpleados(empleadoJson); 
         let empleado = fabricaEmpleados.obtenerInstanciaDelEmpleado();

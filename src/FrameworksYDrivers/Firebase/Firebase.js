@@ -48,6 +48,21 @@ class FirebaseDB {
       });
     })
   }
+
+  obtenerFechaActual(){
+    let fecha = new Date();
+    return ([fecha.getDate(), fecha.getMonth(), fecha.getFullYear()].join('/'));
+  }
+
+   recuperarBoletasDelDiaActual(){
+    return new Promise((resolve, reject) => {
+      let fechaActual = this.obtenerFechaActual();
+      this.boletasRef.orderByChild('fecha').equalTo(fechaActual).once('value', snapshot => {
+          resolve(snapshot.val());
+      });
+    })
+  }
+
 }
 
 const instanciaDB =  new FirebaseDB();

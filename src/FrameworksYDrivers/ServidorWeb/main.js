@@ -36,4 +36,10 @@ app.get('/paychecks', async (req, res)=>{
     res.send(empleados);
  });
 
+ app.get('/paychecksOfTheDay', async (req, res) => {
+    let controladorBoletas = new ControladorBoletas();
+    let boletas = await controladorBoletas.descargarBoletasDelDiaDeHoy();
+    res.send(boletas);
+ });
+
 app.listen(port, () => console.log(`App currently on port: ${port}!`))
