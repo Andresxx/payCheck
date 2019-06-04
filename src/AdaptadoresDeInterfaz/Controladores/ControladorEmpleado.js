@@ -8,4 +8,9 @@ export class ControladorEmpleado {
     crearEmpleado(empleado){
         this.empresa.guardarUnEmpleadoEnLaBaseDeDatos(empleado);
     }
+
+    async descargarEmpleados() {
+        let empleados = await this.empresa.descargarEmpleados();
+        return empleados;
+    }
 }

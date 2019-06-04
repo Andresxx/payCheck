@@ -41,8 +41,8 @@ app.get('/paychecks', async (req, res)=>{
  });
 
  app.get('/employees', async (req, res) => {
-    let empresa = new Empresa();
-    let empleados = await empresa.descargarEmpleados();
+    let controladorEmpleado = new ControladorEmpleado();
+    let empleados = await controladorEmpleado.descargarEmpleados();
     res.send(empleados);
  });
 
